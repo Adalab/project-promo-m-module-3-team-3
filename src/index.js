@@ -18,8 +18,8 @@ ReactDOM.render(
     <Card />
     <Design />
     <Fill />
-    <Footer />
     <Share />
+    <Footer />
     {/* <Main /> */}
     {/* <Section1 /> */}
   </React.StrictMode>,
