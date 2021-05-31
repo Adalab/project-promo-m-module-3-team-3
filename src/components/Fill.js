@@ -1,0 +1,95 @@
+import React, { Component } from 'react';
+import '../styles/App.scss';
+
+class Fill extends Component {
+  render() {
+    return (
+      <div className='marginform'>
+        <fieldset class='js-fill personal-data form__share'>
+          <label for='name' class='label'>
+            Nombre completo
+          </label>
+          <input
+            id='name'
+            type='text'
+            name='name'
+            placeholder='Ej: Sally Jill'
+            class='input'
+            required
+          />
+          <label for='job' class='label'>
+            Puesto
+          </label>
+          <input
+            id='job'
+            type='text'
+            name='job'
+            placeholder='Ej: Front-end unicorn'
+            class='input'
+            required
+          />
+          <label for='button' class='label'>
+            Imagen de perfil
+          </label>
+          <div class='inline'>
+            <label class='action__upload-btn button' for='img-selector'>
+              Añadir imagen
+            </label>
+            <input
+              type='file'
+              name=''
+              id='img-selector'
+              class='action__hiddenField js__profile-upload-btn'
+            />
+            <div class='previous_img js__profile-image js__profile-preview'></div>
+          </div>
+          <label for='email' class='label'>
+            Email
+          </label>
+          <input
+            id='email'
+            type='email'
+            name='email'
+            placeholder='Ej: nombre@mail.com'
+            class='input'
+            required
+          />
+          <label for='phone' class='label'>
+            Teléfono
+          </label>
+          <input
+            id='phone'
+            type='tel'
+            name='phone'
+            placeholder='Ej: 692699556'
+            class='input'
+            required
+          />
+          <label for='linkedIn' class='label'>
+            LinkedIn
+          </label>
+          <input
+            id='linkedin'
+            type='text'
+            name='linkedin'
+            placeholder='sally.jill'
+            class='input'
+            required
+          />
+          <label for='github' class='label'>
+            GitHub
+          </label>
+          <input
+            id='github'
+            type='text'
+            name='github'
+            placeholder='sally-jill'
+            class='input'
+          />
+        </fieldset>
+      </div>
+    );
+  }
+}
+
+export default Fill;
