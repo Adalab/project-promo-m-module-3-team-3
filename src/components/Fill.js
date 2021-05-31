@@ -5,8 +5,8 @@ class Fill extends Component {
   render() {
     return (
       <div className='marginform'>
-        <fieldset class='js-fill personal-data form__share'>
-          <label for='name' class='label'>
+        <fieldset className='js-fill personal-data form__share'>
+          <label for='name' className='label'>
             Nombre completo
           </label>
           <input
@@ -14,10 +14,10 @@ class Fill extends Component {
             type='text'
             name='name'
             placeholder='Ej: Sally Jill'
-            class='input'
+            className='input'
             required
           />
-          <label for='job' class='label'>
+          <label for='job' className='label'>
             Puesto
           </label>
           <input
@@ -25,25 +25,25 @@ class Fill extends Component {
             type='text'
             name='job'
             placeholder='Ej: Front-end unicorn'
-            class='input'
+            className='input'
             required
           />
-          <label for='button' class='label'>
+          <label for='button' className='label'>
             Imagen de perfil
           </label>
-          <div class='inline'>
-            <label class='action__upload-btn button' for='img-selector'>
+          <div className='inline'>
+            <label className='action__upload-btn button' for='img-selector'>
               Añadir imagen
             </label>
             <input
               type='file'
               name=''
               id='img-selector'
-              class='action__hiddenField js__profile-upload-btn'
+              className='action__hiddenField js__profile-upload-btn'
             />
-            <div class='previous_img js__profile-image js__profile-preview'></div>
+            <div className='previous_img js__profile-image js__profile-preview'></div>
           </div>
-          <label for='email' class='label'>
+          <label for='email' className='label'>
             Email
           </label>
           <input
@@ -51,10 +51,10 @@ class Fill extends Component {
             type='email'
             name='email'
             placeholder='Ej: nombre@mail.com'
-            class='input'
+            className='input'
             required
           />
-          <label for='phone' class='label'>
+          <label for='phone' className='label'>
             Teléfono
           </label>
           <input
@@ -62,10 +62,10 @@ class Fill extends Component {
             type='tel'
             name='phone'
             placeholder='Ej: 692699556'
-            class='input'
+            className='input'
             required
           />
-          <label for='linkedIn' class='label'>
+          <label for='linkedIn' className='label'>
             LinkedIn
           </label>
           <input
@@ -73,10 +73,10 @@ class Fill extends Component {
             type='text'
             name='linkedin'
             placeholder='sally.jill'
-            class='input'
+            className='input'
             required
           />
-          <label for='github' class='label'>
+          <label for='github' className='label'>
             GitHub
           </label>
           <input
@@ -84,7 +84,7 @@ class Fill extends Component {
             type='text'
             name='github'
             placeholder='sally-jill'
-            class='input'
+            className='input'
           />
         </fieldset>
       </div>
