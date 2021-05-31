@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/App.scss';
 import Collapsible from './components/Collapsible-title';
-import Design from './components/Design';
-import Fill from './components/Fill';
+// import Design from './components/Design';
+// import Fill from './components/Fill';
 import Footer from './components/Footer';
-import Share from './components/Share';
-// import Section1 from './components/Section1';
+// import Share from './components/Share';
+import Card from './components/Card';
 import Header from './components/Header';
-import Card from './components/Main-card';
 // import Main from './components/Main';
 
 ReactDOM.render(
@@ -16,12 +15,12 @@ ReactDOM.render(
     <Header />
     <Collapsible />
     <Card />
-    <Design />
+    {/* <Design />
     <Fill />
-    <Share />
-    <Footer />
+    <Share /> */}
     {/* <Main /> */}
     {/* <Section1 /> */}
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );
