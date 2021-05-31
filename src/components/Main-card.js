@@ -5,8 +5,8 @@ import '../styles/App.scss';
 class Card extends Component {
   render() {
     return (
-      <main class='cards_main'>
-        <section class='section1'>
+      <main className='cards_main'>
+        <section className='section1'>
           <section className='container1'>
             <button className='button_reset' type='reset'>
               <i className='fa fa-trash' aria-hidden='true'></i>reset
@@ -70,7 +70,7 @@ class Card extends Component {
             </div>
           </section>
         </section>
-        <section class='section2'>
+        <section className='section2'>
           <form className='js-form form'>
             {/* <include src='./design.html'></include>
             <include src='./fill.html'></include>
