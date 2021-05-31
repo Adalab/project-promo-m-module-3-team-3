@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./assets/images/favicon.png" type="image/gif" sizes="16x16" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <title>ecocards</title>
+</head>
+
+<body>
+
+  <header class="header">
+      <a href="index.html">
+          <img class="header__image" src="./assets/images/logo-ecode.png" alt="logotipo"
+              title="Awesome profile cards"></img></a>
+  </header>
+
+  <main class="cards_main">
+    <section class="section1">
+      <section class="container1">
+        <button class="button_reset" type="reset">
+          <i class="fa fa-trash" aria-hidden="true"></i>reset
+        </button>
+        <div class="card">
+          <div class="card_header">
+            <div class="rectangle"></div>
+            <div class="name_job">
+              <div class="name">Mileva Marić</div>
+              <div class="job">Matemática</div>
+            </div>
+          </div>
+          <div class="card_image js__profile-preview"></div>
+          <div class="logos">
+            <div class="icon js-icon1 opacity">
+              <a href="tel:" class="link1 js-phone" target="_blank"><i class="fas fa-mobile-alt iconcolor"></i></a>
+            </div>
+            <div class="icon js-icon2 opacity">
+              <a href="mailto:" class="link1 js-email" target="_blank"><i class="far fa-envelope iconcolor"></i></a>
+            </div>
+            <div class="icon js-icon3 opacity">
+              <a href="" class="link1 js-linkedin" target="_blank"><i class="fab fa-linkedin-in iconcolor"></i></a>
+            </div>
+            <div class="icon js-icon4 opacity">
+              <a href="" class="link1 js-github" target="_blank"><i class="fab fa-github-alt iconcolor"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="section2">
+      <form class="js-form form">
+        <!-- <div class="collapsible">
+    <div class="icon-design"><i class="far fa-object-ungroup"></i></div>
+    <div class="design-text">diseña</div>
+    <div class="arrow"><i class="fas fa-chevron-down section__icon2"></i></div>
+</div> -->
+
+<div class="collapsiblebox js-cdesign">
+  <div class="collapsible">
+    <div class="collapsible__icon"><i class="far fa-object-ungroup"></i></div>
+    <div class="collapsible__title">diseña</div>
+    <div class="arrow">
+      <i class="fas fa-chevron-down collapsible__icon2 js-arrowD"></i>
+    </div>
+  </div>
+  <div class="line"></div>
+</div>
+
+        <div class="js-design marginform">
+          <h3 class="colortext">colores</h3>
+
+          <fieldset class="design">
+            <label class="design__option-label label1">
+              <input type="radio" name="palette" class="design__option-radio js-palette" value="1" checked id="blue" />
+              <ul class="palette-1">
+                <li class="design__option-color color-1"></li>
+                <li class="design__option-color color-2"></li>
+                <li class="design__option-color color-3"></li>
+              </ul>
+            </label>
+            <label class="design__option-label label2">
+              <input type="radio" name="palette" class="design__option-radio js-palette" value="2" id="red" />
+              <ul class="palette-2">
+                <li class="design__option-color color-4"></li>
+                <li class="design__option-color color-5"></li>
+                <li class="design__option-color color-6"></li>
+              </ul>
+            </label>
+            <label class="design__option-label label3">
+              <input type="radio" name="palette" class="design__option-radio js-palette" value="3" id="yellow" />
+              <ul class="palette-3">
+                <li class="design__option-color color-7"></li>
+                <li class="design__option-color color-8"></li>
+                <li class="design__option-color color-9"></li>
+              </ul>
+            </label>
+          </fieldset>
+        </div>
+        <!-- <div class="collapsible">
+    <div class="icon-design"><i class="far fa-keyboard"></i></div>
+    <div class="design-text">rellena</div>
+    <div class="arrow"><i class="fas fa-chevron-down section__icon2"></i></div>
+</div> -->
+
+<div class="collapsiblebox js-cfill">
+  <div class="collapsible">
+    <div class="collapsible__icon"><i class="far fa-keyboard"></i></div>
+    <div class="collapsible__title">rellena</div>
+    <div class="arrow">
+      <i class="fas fa-chevron-down collapsible__icon2 js-arrowF"></i>
+    </div>
+  </div>
+  <div class="line"></div>
+</div>
+
+        <div class="marginform">
+          <fieldset class="js-fill personal-data form__share">
+            <label for="name" class="label">Nombre completo</label>
+            <input id="name" type="text" name="name" placeholder="Ej: Sally Jill" class="input" required />
+            <label for="job" class="label">Puesto</label>
+            <input id="job" type="text" name="job" placeholder="Ej: Front-end unicorn" class="input" required />
+            <label for="button" class="label">Imagen de perfil</label>
+            <div class="inline">
+              <label class="action__upload-btn button" for="img-selector">Añadir imagen</label>
+              <input type="file" name="" id="img-selector" class="action__hiddenField js__profile-upload-btn" />
+              <div class="previous_img js__profile-image js__profile-preview"></div>
+            </div>
+            <label for="email" class="label">Email</label>
+            <input id="email" type="email" name="email" placeholder="Ej: nombre@mail.com" class="input" required />
+            <label for="phone" class="label">Teléfono</label>
+            <input id="phone" type="tel" name="phone" placeholder="Ej: 692699556" class="input" required />
+            <label for="linkedIn" class="label">LinkedIn</label>
+            <input id="linkedin" type="text" name="linkedin" placeholder="sally.jill" class="input" required />
+            <label for="github" class="label">GitHub</label>
+            <input id="github" type="text" name="github" placeholder="sally-jill" class="input" />
+          </fieldset>
+        </div>
+        <!-- <div class="collapsible">
+    <div class="icon-design"><i class="far fas fa-share-alt"></i></div>
+    <div class="design-text">comparte</div>
+    <div class="arrow"><i class="fas fa-chevron-down section__icon2"></i></div>
+</div> -->
+
+<div class="collapsiblebox js-cshare">
+  <div class="collapsible">
+    <div class="collapsible__icon"><i class="far fas fa-share-alt"></i></div>
+    <div class="collapsible__title">comparte</div>
+    <div class="arrow">
+      <i class="fas fa-chevron-down collapsible__icon2 js-arrowS"></i>
+    </div>
+  </div>
+  <div class="line"></div>
+</div>
+
+        <div class="marginform">
+          <fieldset class="share_form js-share">
+            <container class="container__share">
+              <button class="container__share--button js-createcard" type="button">
+                <a class="share__button--link" title="Crear Tarjeta" target="_blank"><i class="far fa-address-card"></i>Crear
+                  Tarjeta</a>
+              </button>
+              <div class="twitter_button js-response hidden">
+              </div>
+              <button class="container__share--twitter js-twitter hidden" type="button">
+                <a class="share__twitter--link js-linkTwitter" title="Twitter" target="_blank"><i class="fab fa-twitter"></i>
+                  Compartir en
+                  Twitter</a>
+              </button>
+            </container>
+          </fieldset>
+        </div>
+      </form>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+      <small>Ecode &copy;2021 logo adalab</small>
+
+      <img class="footer__image" src="./assets/images/logo-adalab.png" alt="logo adalab" title="Logo de Adalab"></img>
+  </footer>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
