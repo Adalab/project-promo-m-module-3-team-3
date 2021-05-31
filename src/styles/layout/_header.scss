@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media all and (min-width: 768px) {
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
+}
+
+.header__image {
+  width: 160px;
+}

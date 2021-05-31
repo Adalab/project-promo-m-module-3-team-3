@@ -1,0 +1,66 @@
+.container__share {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.container__share--button {
+  background-color: $colorSecundary;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 18px 13px 17px;
+  width: 199px;
+  height: 50px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: $fontText;
+  font-weight: 200;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.far.fa-address-card {
+  margin-right: 6px;
+}
+
+.container__share--twitter {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: #00a0f5;
+  height: 30px;
+  width: 181px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  box-shadow: 0 0 4px 0 (grey);
+}
+
+.twitter_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  height: 136px;
+  width: 100%;
+  border-top: #d8d8d8 solid 1px;
+}
+
+.twitter_button {
+  display: flex;
+  flex-direction: column;
+}
+.cardcreated-js {
+  font-family: $fontTitle;
+  margin-bottom: 20px;
+}
+.linkcard {
+  font-family: $fontText;
+  color: $colorTitle;
+}

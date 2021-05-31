@@ -1,0 +1,63 @@
+.personal-data {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorSecundary;
+  color: white;
+  width: 140px;
+  height: 30px;
+  font-family: $fontText;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+}
+.label {
+  color: $colorText;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.input {
+  height: 30px;
+  padding-left: 9px;
+  margin-bottom: 12px;
+  border: solid $colorSecundary 1px;
+  border-radius: 5px;
+  &::placeholder {
+    color: #c5c5c5;
+  }
+}
+.previous_img {
+  border: solid grey 1px;
+  // display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  background-size: cover;
+}
+.inline {
+  display: flex;
+}
+
+.action__hiddenField {
+  display: none;
+}
+.js-border-input {
+  border: rem(1) solid red;
+}
+.js-error-message {
+  color: red;
+  display: none;
+  padding-bottom: rem(11);
+}
+
+.js-error {
+  .js-error-message {
+    display: block;
+  }
+}

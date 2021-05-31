@@ -1,0 +1,98 @@
+.colortext {
+  text-transform: uppercase;
+  font-family: $fontText;
+  font-size: 14px;
+  color: #54585a;
+  margin-top: 12px;
+}
+//paleta de colores
+.design {
+  margin-top: 6px;
+  position: relative;
+
+  &__option-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__option-radio {
+    align-items: center;
+  }
+  &__option-color {
+    width: 30px;
+    height: 25px;
+    display: inline-block;
+    margin: -2.5px;
+  }
+}
+
+.palette-1 {
+  padding-left: 10px;
+  .color-1 {
+    background-color: $colorText;
+  }
+  .color-2 {
+    background-color: $colorpalette2;
+  }
+  .color-3 {
+    background-color: $colorpalette3;
+  }
+}
+.palette-2 {
+  padding-left: 10px;
+  .color-4 {
+    background-color: $colorpalette4;
+  }
+  .color-5 {
+    background-color: $colorpalette5;
+  }
+  .color-6 {
+    background-color: $colorpalette6;
+  }
+}
+.palette-3 {
+  padding-left: 10px;
+  .color-7 {
+    background-color: $colorpalette7;
+  }
+  .color-8 {
+    background-color: $colorpalette8;
+  }
+  .color-9 {
+    background-color: $colorpalette9;
+  }
+}
+
+.js-color1 {
+  color: $colorText;
+}
+.js-color2 {
+  background-color: $colorpalette2;
+}
+
+.js-color3 {
+  border: solid 2px $colorpalette3;
+}
+
+.js-color4 {
+  color: $colorpalette4;
+}
+.js-color5 {
+  background-color: $colorpalette5;
+}
+
+.js-color6 {
+  border: solid 2px $colorpalette6;
+}
+.js-color7 {
+  color: $colorpalette7;
+}
+.js-color8 {
+  background-color: $colorpalette8;
+}
+
+.js-color9 {
+  border: solid 2px $colorpalette9;
+}
