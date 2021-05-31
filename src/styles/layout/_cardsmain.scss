@@ -1,9 +1,9 @@
-.cards_main {
-  background-image: url('../images/bg-simple.png');
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-}
+// .cards_main {
+//   background-image: url('../images/bg-simple.png');
+//   background-size: cover;
+//   background-position: left;
+//   background-repeat: no-repeat;
+// }
 
 @media all and (min-width: 768px) {
   .cards_main {
@@ -14,10 +14,6 @@
     padding-right: 40px;
     padding-left: 40px;
     padding-top: 23px;
-    background-image: url('../images/bg-simple.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
   }
   .section1 {
     display: flex;
