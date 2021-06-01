@@ -8,62 +8,71 @@ import "../styles/App.scss";
 class Main extends Component {
   render() {
     return (
-      <main className='main'>
-        <div className='logotype'>
-          <img
-            className='logotype__image--ec'
-            src={ec}
-            href='../images/ec.png'
-            alt='logotipo'
-            title='Awesome profile cards'
-          />
-          <div className='logotype__rectangle'>
-            <div className='logotype__circle'>
-              <img
-                className='logotype__circle--hojas'
-                src={hojas}
-                alt='hojas'
-              />
+      <>
+        <div class='background'></div>
+        <div class='star'></div>
+        <div class='plant'></div>
+        <main className='main'>
+          <div className='logotype'>
+            <img
+              className='logotype__image--ec'
+              src={ec}
+              href='../images/ec.png'
+              alt='logotipo'
+              title='Awesome profile cards'
+            />
+            <div className='logotype__rectangle'>
+              <div className='logotype__circle'>
+                <img
+                  className='logotype__circle--hojas'
+                  src={hojas}
+                  alt='hojas'
+                />
+              </div>
             </div>
+            <img
+              className='logotype__image--de'
+              src={de}
+              alt='logo'
+              title='Awesome profile cards'
+            />
           </div>
-          <img
-            className='logotype__image--de'
-            src={de}
-            alt='logo'
-            title='Awesome profile cards'
-          />
-        </div>
 
-        <h1 className='main__title'>Crea tu tarjeta de visita</h1>
-        <p className='main__text'>
-          Crea mejores contactos profesionales de forma fácil y cómoda
-        </p>
-        <section className='main__section'>
-          <div className='main__section-box'>
-            <div className='main__section-box--icon'>
-              <i className='far fa-object-ungroup'></i>
+          <h1 className='main__title'>Crea tu tarjeta de visita</h1>
+          <p className='main__text'>
+            Crea mejores contactos profesionales de forma fácil y cómoda
+          </p>
+          <section className='main__section'>
+            <div className='main__section-box'>
+              <div className='main__section-box--icon'>
+                <i className='far fa-object-ungroup'></i>
+              </div>
+              <div className='main__section-box--text'>Diseña</div>
             </div>
-            <div className='main__section-box--text'>Diseña</div>
-          </div>
-          <div className='main__section-box'>
-            <div className='main__section-box--icon'>
-              <i className='far fa-keyboard'></i>
+            <div className='main__section-box'>
+              <div className='main__section-box--icon'>
+                <i className='far fa-keyboard'></i>
+              </div>
+              <div className='main__section-box--text'>Rellena</div>
             </div>
-            <div className='main__section-box--text'>Rellena</div>
-          </div>
-          <div className='main__section-box'>
-            <div className='main__section-box--icon'>
-              <i className='fas fa-share-alt'></i>
+            <div className='main__section-box'>
+              <div className='main__section-box--icon'>
+                <i className='fas fa-share-alt'></i>
+              </div>
+              <div className='main__section-box--text'>Comparte</div>
             </div>
-            <div className='main__section-box--text'>Comparte</div>
-          </div>
-        </section>
-        <button className='main__button' type='button'>
-          <a className='main__button--link' href='cards.html' title='comenzar'>
-            Comenzar
-          </a>
-        </button>
-      </main>
+          </section>
+          <button className='main__button' type='button'>
+            <a
+              className='main__button--link'
+              href='cards.html'
+              title='comenzar'
+            >
+              Comenzar
+            </a>
+          </button>
+        </main>
+      </>
     );
   }
 }
