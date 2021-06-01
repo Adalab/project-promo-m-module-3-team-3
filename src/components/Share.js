@@ -4,8 +4,6 @@ import "../styles/App.scss";
 class Share extends Component {
   render() {
     return (
-      /*<include src="./collapsible.html" title="comparte" icon="fas fa-share-alt" arrowmove="js-arrowS" clase="js-cshare">
-    </include>*/
       <div className="marginform">
         <fieldset className="share_form js-share">
           <container className="container__share">
