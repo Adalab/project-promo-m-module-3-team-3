@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.scss';
 import photo from '../images/ilustraciones.gif';
 
-class Section1 extends Component {
+class CardPreview extends Component {
   render() {
     return (
       <section className='container1'>
@@ -71,4 +71,4 @@ class Section1 extends Component {
   }
 }
 
-export default Section1;
+export default CardPreview;
