@@ -8,28 +8,24 @@
 @media all and (min-width: 768px) {
   .cards_main {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row-reverse;
-    height: 852px;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 23px;
-  }
-  .section1 {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: 812px;
-    border-radius: 10px;
-  }
-  .section2 {
-    width: 50%;
-    padding-right: 30px;
+    padding-bottom: 40px;
+    &--form {
+      width: 50%;
+    }
+    &--preview {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      background-color: rgba(254, 256, 125, 0.5);
+      border-radius: 15px;
+    }
   }
 }
 @media all and (min-width: 1200px) {
-  .section1 {
-    width: 585px;
-    flex-grow: 1;
+  .cards_main {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
