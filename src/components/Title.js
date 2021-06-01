@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.scss';
 
-class Collapsible extends Component {
+class Title extends Component {
   render() {
     return (
       <div className='collapsiblebox @@clase'>
@@ -20,4 +20,4 @@ class Collapsible extends Component {
   }
 }
 
-export default Collapsible;
+export default Title;
