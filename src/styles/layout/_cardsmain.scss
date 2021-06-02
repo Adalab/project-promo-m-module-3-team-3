@@ -5,31 +5,27 @@
 //   background-repeat: no-repeat;
 // }
 
-@media all and (min-width: 768px) {
-  .cards_main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    height: 852px;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 23px;
-  }
-  .section1 {
+.cards_main {
+  &--preview {
     display: flex;
     justify-content: center;
-    width: 50%;
-    height: 812px;
-    border-radius: 10px;
+    align-items: center;
+    background-color: rgba(254, 256, 125, 0.5);
   }
-  .section2 {
-    width: 50%;
-    padding-right: 30px;
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 40px;
+    &--form {
+      width: 50%;
+    }
+    &--preview {
+      width: 50%;
+      border-radius: 15px;
+    }
   }
-}
-@media all and (min-width: 1200px) {
-  .section1 {
-    width: 585px;
-    flex-grow: 1;
+  @media all and (min-width: 1200px) {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }

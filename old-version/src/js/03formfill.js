@@ -3,8 +3,6 @@
 const form = document.querySelector(".js-form");
 const reset = document.querySelector(".button_reset");
 
-//const iconColor = document.querySelector(".iconcolor-opacity");
-
 function changeTitle(ev) {
   const inputForm = ev.target.name;
   const inputValue = ev.target.value;
