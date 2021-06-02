@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/App.scss';
 import awesome from '../images/logo-awesome-profile-cards.svg';
 
-class Template extends Component {
+class Header extends Component {
   render() {
     return (
       <header className='header'>
@@ -19,4 +19,4 @@ class Template extends Component {
   }
 }
 
-export default Template;
+export default Header;
