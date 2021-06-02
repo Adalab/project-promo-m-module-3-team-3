@@ -16,7 +16,7 @@ function App() {
         <section className='cards_main--preview'>
           <CardPreview />
         </section>
-        <form className='js-form form cards_main--form'>
+        <form className='js-form cards_main--form'>
           <Title
             nameClass='js-cdesign'
             title='Diseña'
