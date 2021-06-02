@@ -5,8 +5,14 @@
 //   background-repeat: no-repeat;
 // }
 
-@media all and (min-width: 768px) {
-  .cards_main {
+.cards_main {
+  &--preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(254, 256, 125, 0.5);
+  }
+  @media all and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     padding-bottom: 40px;
@@ -14,17 +20,11 @@
       width: 50%;
     }
     &--preview {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 50%;
-      background-color: rgba(254, 256, 125, 0.5);
       border-radius: 15px;
     }
   }
-}
-@media all and (min-width: 1200px) {
-  .cards_main {
+  @media all and (min-width: 1200px) {
     max-width: 1000px;
     margin: 0 auto;
   }

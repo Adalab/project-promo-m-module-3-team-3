@@ -27,8 +27,8 @@ console.log(arrowShare);
 function hiddenDesign(){
 contentDesign.classList.add('hidden');
 //arrowDesign.classList.add('arrowhidden');
-
 }
+
 function hiddenFill (){
     contentFill.classList.remove('hidden');
     arrowFill.classList.remove('arrowhidden');
