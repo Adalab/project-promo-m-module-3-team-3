@@ -6,7 +6,7 @@ class Share extends Component {
     return (
       <div className='marginform'>
         <fieldset className='share_form js-share'>
-          <container className='container__share'>
+          <div className='container__share'>
             <button
               className='container__share--button js-createcard'
               type='button'
@@ -33,7 +33,7 @@ class Share extends Component {
                 Compartir en Twitter
               </a>
             </button>
-          </container>
+          </div>
         </fieldset>
       </div>
     );
