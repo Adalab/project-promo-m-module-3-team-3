@@ -1,13 +1,12 @@
 .footer {
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: $fontText;
   font-size: 14px;
   color: #6b6b6b;
-  border-top: solid 1px #6b6b6b;
+  border-top: solid 1px #d8d8d8;
   padding: 12px 47px 0 48px;
   @media all and (min-width: 768px) {
     flex-direction: row;

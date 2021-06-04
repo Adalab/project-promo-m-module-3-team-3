@@ -3,34 +3,40 @@ import '../styles/App.scss';
 import Design from './Design';
 import Fill from './Fill';
 import Share from './Share';
-import Title from './Title';
+import Collapsable from './Collapsable';
 
-function Form() {
-  return (
-    <form className='js-form cards_main--form'>
-      <Title
-        nameClass='js-cdesign'
-        title='Diseña'
-        iconClass='fa-object-ungroup'
-        arrowClass='js-arrowD'
-      />
-      <Design />
-      <Title
-        nameClass='js-cfill'
-        title='rellena'
-        iconClass='fa-keyboard'
-        arrowClass='js-arrowF'
-      />
-      <Fill />
-      <Title
-        nameClass='js-cshare'
-        title='comparte'
-        iconClass='fas fa-share-alt'
-        arrowClass='js-arrowS'
-      />
-      <Share />
-    </form>
-  );
+class Form extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <form className='js-form cards_main--form'>
+        <Collapsable
+          nameClass='js-cdesign'
+          title='Diseña'
+          iconClass='fa-object-ungroup'
+          arrowClass='js-arrowD'
+          children={<Design />}
+        />
+        <Collapsable
+          nameClass='js-cfill'
+          title='rellena'
+          iconClass='fa-keyboard'
+          arrowClass='js-arrowF'
+          children={<Fill />}
+        />
+        <Collapsable
+          nameClass='js-cshare'
+          title='comparte'
+          iconClass='fas fa-share-alt'
+          arrowClass='js-arrowS'
+          children={<Share />}
+        />
+      </form>
+    );
+  }
 }
 
 export default Form;

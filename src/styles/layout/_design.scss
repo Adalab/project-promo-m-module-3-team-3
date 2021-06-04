@@ -17,39 +17,47 @@
     align-items: center;
     margin-bottom: 20px;
   }
-  &__option-color {
+  &__option-1,
+  &__option-2,
+  &__option-3 {
     width: 30px;
     height: 25px;
     display: inline-block;
   }
 }
-.palette {
+.palette-1 {
   padding-left: 10px;
-  .color-1 {
+  .design__option-1 {
     background-color: $colorText;
   }
-  .color-2 {
+  .design__option-2 {
     background-color: $colorpalette2;
   }
-  .color-3 {
+  .design__option-3 {
     background-color: $colorpalette3;
   }
-  .color-4 {
+}
+.palette-2 {
+  padding-left: 10px;
+  .design__option-1 {
     background-color: $colorpalette4;
   }
-  .color-5 {
+  .design__option-2 {
     background-color: $colorpalette5;
   }
-  .color-6 {
+  .design__option-3 {
     background-color: $colorpalette6;
   }
-  .color-7 {
+}
+.palette-3 {
+  padding-left: 10px;
+  .design__option-1 {
     background-color: $colorpalette7;
   }
-  .color-8 {
+  .design__option-2 {
     background-color: $colorpalette8;
   }
-  .color-9 {
+  .design__option-3 {
     background-color: $colorpalette9;
   }
 }

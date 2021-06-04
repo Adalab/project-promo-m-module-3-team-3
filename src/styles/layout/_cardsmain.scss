@@ -6,11 +6,16 @@
 // }
 
 .cards_main {
+  min-height: 84vh;
   &--preview {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(254, 256, 125, 0.5);
+    margin: 0;
+  }
+  &--form {
+    margin: 0 20px;
   }
   @media all and (min-width: 768px) {
     display: flex;
@@ -23,6 +28,7 @@
     &--preview {
       width: 50%;
       border-radius: 15px;
+      min-height: 80vh;
     }
   }
   @media all and (min-width: 1200px) {
