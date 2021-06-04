@@ -6,10 +6,6 @@ import Share from './Share';
 import Collapsable from './Collapsable';
 
 class Form extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <form className='js-form cards_main--form'>
