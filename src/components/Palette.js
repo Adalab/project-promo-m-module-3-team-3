@@ -9,7 +9,7 @@ function Palette(props) {
         <input
           type='radio'
           name='palette'
-          className='design__option-radio js-palette'
+         // className='design__option-radio js-palette'
           value={props.value} 
           checked
           id={props.id}
