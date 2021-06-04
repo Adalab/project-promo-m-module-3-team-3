@@ -1,10 +1,18 @@
-import React from "react";
-import "../styles/App.scss";
+import React from 'react';
+import '../styles/App.scss';
 
 function Input(props) {
+  const handleChange = (ev) => {
+    console.log('hola', props.handleChange);
+    props.handleChange({
+      value: ev.target.value,
+      key: ev.target.name,
+    });
+  };
+
   return (
     <>
-      <label for={props.for} className="label">
+      <label for={props.for} className='label'>
         {props.label}
       </label>
       <input
@@ -12,7 +20,8 @@ function Input(props) {
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}
-        className="input"
+        className='input'
+        onChange={handleChange}
       />
     </>
   );

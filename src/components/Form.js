@@ -8,6 +8,24 @@ import Collapsable from './Collapsable';
 class Form extends React.Component {
   constructor(props) {
     super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      name: '',
+      job: '',
+      image: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      phone: '',
+      palette: '',
+    };
+  }
+  handleChange(inputData) {
+    console.log(inputData.key);
+    const data = {
+      [inputData.key]: inputData.value,
+    };
+    this.setState(data);
   }
 
   render() {
@@ -19,13 +37,14 @@ class Form extends React.Component {
           iconClass='fa-object-ungroup'
           arrowClass='js-arrowD'
           children={<Design />}
+          open
         />
         <Collapsable
           nameClass='js-cfill'
           title='rellena'
           iconClass='fa-keyboard'
           arrowClass='js-arrowF'
-          children={<Fill />}
+          children={<Fill handleChange={this.handleChange} />}
         />
         <Collapsable
           nameClass='js-cshare'

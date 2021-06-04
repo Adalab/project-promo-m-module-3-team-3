@@ -4,9 +4,29 @@ import '../styles/App.scss';
 class Collapsable extends Component {
   constructor(props) {
     super(props);
+
     this.handleClick = this.handleClick.bind(this);
+    /*let initialOpen = false;
+
+    if (this.props.open === true) {
+      initialOpen = true;
+    }
+
     this.state = {
-      isOpen: false,
+      isOpen: initialOpen,
+    };*/
+
+    // otra opción
+
+    /*let initialOpen;
+    if (this.props.open === true) {
+      initialOpen = true;
+    } else {
+      initialOpen = false;
+    }*/
+
+    this.state = {
+      isOpen: this.props.open === true ? true : false,
     };
   }
 
