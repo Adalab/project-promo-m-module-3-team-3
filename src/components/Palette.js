@@ -9,7 +9,6 @@ function Palette(props) {
         name='palette'
         // className='design__option-radio js-palette'
         value={props.value}
-        checked
         id={props.id}
       />
       <ul className={props.palette}>
