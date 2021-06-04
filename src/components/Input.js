@@ -12,7 +12,7 @@ function Input(props) {
 
   return (
     <>
-      <label for={props.for} className='label'>
+      <label htmlFor={props.htmlFor} className='label'>
         {props.label}
       </label>
       <input

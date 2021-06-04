@@ -8,7 +8,7 @@ class Fill extends Component {
       <div className='marginform'>
         <fieldset className='js-fill personal-data form__share'>
           <Input
-            for='name'
+            htmlFor='name'
             label='Nombre completo'
             id='name'
             type='text'
@@ -17,7 +17,7 @@ class Fill extends Component {
             handleChange={this.props.handleChange}
           />
           <Input
-            for='job'
+            htmlFor='job'
             label='Puesto'
             id='job'
             type='text'
@@ -25,11 +25,11 @@ class Fill extends Component {
             placeholder='Ej: Front-end unicorn'
             handleChange={this.props.handleChange}
           />
-          <label for='button' className='label'>
+          <label htmlFor='button' className='label'>
             Imagen de perfil
           </label>
           <div className='inline'>
-            <label className='action__upload-btn button' for='img-selector'>
+            <label className='action__upload-btn button' htmlFor='img-selector'>
               Añadir imagen
             </label>
             <input
@@ -41,7 +41,7 @@ class Fill extends Component {
             <div className='previous_img js__profile-image js__profile-preview'></div>
           </div>
           <Input
-            for='email'
+            htmlFor='email'
             label='Email'
             id='email'
             type='email'
@@ -49,7 +49,7 @@ class Fill extends Component {
             placeholder='Ej: nombre@mail.com'
           />
           <Input
-            for='phone'
+            htmlFor='phone'
             label='Teléfono'
             id='phone'
             type='tel'
@@ -57,7 +57,7 @@ class Fill extends Component {
             placeholder='Ej: 692699556'
           />
           <Input
-            for='linkedIn'
+            htmlFor='linkedIn'
             label='LinkedIn'
             id='linkedIn'
             type='text'
@@ -65,7 +65,7 @@ class Fill extends Component {
             placeholder='sally.jill'
           />
           <Input
-            for='github'
+            htmlFor='github'
             label='GitHub'
             id='github'
             type='text'
