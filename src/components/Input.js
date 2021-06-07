@@ -22,6 +22,7 @@ function Input(props) {
         placeholder={props.placeholder}
         className='input'
         onChange={props.handleChange}
+        maxlength={props.maxlength}
       />
     </>
   );

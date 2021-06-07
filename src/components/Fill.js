@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import "../styles/App.scss";
-import Input from "./Input";
+import React, { Component } from 'react';
+import '../styles/App.scss';
+import Input from './Input';
 
 class Fill extends Component {
   render() {
@@ -15,6 +15,7 @@ class Fill extends Component {
             name='name'
             placeholder='Ej: Sally Jill'
             handleChange={this.props.handleChange}
+            maxlength='18'
           />
           <Input
             htmlFor='job'
@@ -24,6 +25,7 @@ class Fill extends Component {
             name='job'
             placeholder='Ej: Front-end unicorn'
             handleChange={this.props.handleChange}
+            maxlength='20'
           />
           <label htmlFor='button' className='label'>
             Imagen de perfil
