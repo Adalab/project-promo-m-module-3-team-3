@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import '../styles/App.scss';
-import photo from '../images/ilustraciones.gif';
+import React, { Component } from "react";
+import "../styles/App.scss";
+import photo from "../images/ilustraciones.gif";
 
 class CardPreview extends Component {
   render() {
@@ -12,8 +12,12 @@ class CardPreview extends Component {
         </button>
         <div className='card'>
           <div className='card_header'>
-            <h2 className='card_header--name'>Mileva Marić</h2>
-            <h3 className='card_header--job'>Matemática</h3>
+            <h2 className='card_header--name'>
+              {this.props.name ? this.props.name : "Mileva Màric"}
+            </h2>
+            <h3 className='card_header--job'>
+              {this.props.job ? this.props.job : "Matemática"}
+            </h3>
           </div>
           <img
             className='card_image js__profile-preview'
@@ -23,7 +27,7 @@ class CardPreview extends Component {
 
           <div className='card_logos'>
             <a
-              href='tel:'
+              href={this.props.phone}
               className='link1 js-phone card_logos--icon'
               target='_blank'
               rel='noreferrer'
@@ -32,7 +36,7 @@ class CardPreview extends Component {
             </a>
 
             <a
-              href='mailto:'
+              href={`mailto: ${this.props.email}`}
               className='link1 js-email card_logos--icon'
               target='_blank'
               rel='noreferrer'
@@ -40,7 +44,7 @@ class CardPreview extends Component {
               <i className='far fa-envelope'></i>
             </a>
             <a
-              href='https'
+              href={`https://www.linkedin.com/in/ ${this.props.linkedin}`}
               className='link1 js-linkedin card_logos--icon'
               target='_blank'
               rel='noreferrer'
@@ -49,7 +53,8 @@ class CardPreview extends Component {
             </a>
 
             <a
-              href='https'
+              href={`https://github.com/
+              ${this.props.github}`}
               className='link1 js-github card_logos--icon'
               target='_blank'
               rel='noreferrer'
@@ -62,5 +67,9 @@ class CardPreview extends Component {
     );
   }
 }
+// CardPreview.defaultProps = {
+//   name: "Mileva Màric",
+//   job: "Matemática",
+// };
 
 export default CardPreview;

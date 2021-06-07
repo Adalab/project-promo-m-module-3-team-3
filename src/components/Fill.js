@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import '../styles/App.scss';
-import Input from './Input';
+import React, { Component } from "react";
+import "../styles/App.scss";
+import Input from "./Input";
 
 class Fill extends Component {
   render() {
@@ -47,6 +47,7 @@ class Fill extends Component {
             type='email'
             name='email'
             placeholder='Ej: nombre@mail.com'
+            handleChange={this.props.handleChange}
           />
           <Input
             htmlFor='phone'
@@ -55,6 +56,7 @@ class Fill extends Component {
             type='tel'
             name='phone'
             placeholder='Ej: 692699556'
+            handleChange={this.props.handleChange}
           />
           <Input
             htmlFor='linkedIn'
@@ -63,6 +65,7 @@ class Fill extends Component {
             type='text'
             name='linkedin'
             placeholder='sally.jill'
+            handleChange={this.props.handleChange}
           />
           <Input
             htmlFor='github'
@@ -71,6 +74,7 @@ class Fill extends Component {
             type='text'
             name='github'
             placeholder='sally-jill'
+            handleChange={this.props.handleChange}
           />
         </fieldset>
       </div>

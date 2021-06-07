@@ -1,14 +1,14 @@
-import React from 'react';
-import '../styles/App.scss';
+import React from "react";
+import "../styles/App.scss";
 
 function Input(props) {
-  const handleChange = (ev) => {
-    console.log('hola', props.handleChange);
-    props.handleChange({
-      value: ev.target.value,
-      key: ev.target.name,
-    });
-  };
+  // const handleChange = (ev) => {
+  //   console.log('hola', props.handleChange);
+  //   props.handleChange({
+  //     value: ev.target.value,
+  //     key: ev.target.name,
+  //   });
+  // };
 
   return (
     <>
@@ -21,7 +21,7 @@ function Input(props) {
         name={props.name}
         placeholder={props.placeholder}
         className='input'
-        onChange={handleChange}
+        onChange={props.handleChange}
       />
     </>
   );
