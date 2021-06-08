@@ -34,12 +34,12 @@
 }
 .previous_img {
   border: solid grey 1px;
-  // display: inline-block;
   width: 30px;
   height: 30px;
   margin-left: 20px;
   background-size: cover;
 }
+
 .inline {
   display: flex;
 }
@@ -47,17 +47,17 @@
 .action__hiddenField {
   display: none;
 }
-.js-border-input {
-  border: rem(1) solid red;
-}
-.js-error-message {
-  color: red;
-  display: none;
-  padding-bottom: rem(11);
-}
+// .js-border-input {
+//   border: rem(1) solid red;
+// }
+// .js-error-message {
+//   color: red;
+//   display: none;
+//   padding-bottom: rem(11);
+// }
 
-.js-error {
-  .js-error-message {
-    display: block;
-  }
-}
+// .js-error {
+//   .js-error-message {
+//     display: block;
+//   }
+// }

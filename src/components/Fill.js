@@ -15,7 +15,7 @@ class Fill extends Component {
             name='name'
             placeholder='Ej: Sally Jill'
             handleChange={this.props.handleChange}
-            maxlength='18'
+            maxLength='18'
           />
           <Input
             htmlFor='job'
@@ -25,7 +25,7 @@ class Fill extends Component {
             name='job'
             placeholder='Ej: Front-end unicorn'
             handleChange={this.props.handleChange}
-            maxlength='20'
+            maxLength='20'
           />
           <label htmlFor='button' className='label'>
             Imagen de perfil

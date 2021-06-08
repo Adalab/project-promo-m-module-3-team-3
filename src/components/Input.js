@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/App.scss";
+import React from 'react';
+import '../styles/App.scss';
 
 function Input(props) {
   // const handleChange = (ev) => {
@@ -22,7 +22,7 @@ function Input(props) {
         placeholder={props.placeholder}
         className='input'
         onChange={props.handleChange}
-        maxlength={props.maxlength}
+        maxLength={props.maxlength}
       />
     </>
   );

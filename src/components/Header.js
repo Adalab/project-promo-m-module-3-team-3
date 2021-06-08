@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.scss';
-import awesome from '../images/logo-awesome-profile-cards.svg';
+import ecode from '../images/logo-ecode.png';
 
 class Header extends Component {
   render() {
@@ -9,7 +9,7 @@ class Header extends Component {
         <a href='index.html'>
           <img
             className='header__image'
-            src={awesome}
+            src={ecode}
             alt='logotipo'
             title='Awesome profile cards'
           ></img>
