@@ -1,6 +1,6 @@
 
 Proyecto  creado por 5 compañeras durante el transcurso del bootcap de Adalab
-Dicho proyecto consiste en heredar código reali<ado por compañeras de otro equipo,  y refactorizarlo
+Dicho proyecto consiste en heredar código realizado por compañeras de otro equipo,  y refactorizarlo
 
 Puedes ver el resultado final accediendo directamente a este enlace:
 http://beta.adalab.es/project-promo-m-module-3-team-3/
@@ -9,7 +9,7 @@ http://beta.adalab.es/project-promo-m-module-3-team-3/
 Analizar y refactorizar código heredado
 Identificar y crear componentes de una página
 Uso de React
-Bsqueda de información en librerias externas
+Búsqueda de información en librerias externas
 
 
 Para poder lllevarlo a cabo hemos aplicado conocimientos adquiridos durante estos meses
@@ -31,7 +31,6 @@ Publicación del resultado en Internet usando GitHub Pagesç
 ##Metodologa de trabajo
 
 MARCO SCRUM dividido en dos sprints
-
 
 
 ##Acceso y estructuración de carpetas proyecto
