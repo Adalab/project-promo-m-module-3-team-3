@@ -67,24 +67,22 @@ class GetAvatar extends React.Component {
   render() {
     const avatar = this.props.avatar === '' ? defaultPhoto : this.props.avatar;
     return (
-      <div className='get-avatar inline'>
+      <div className='get-avatar'>
         <label
-          className='get-avatar__label action__upload-btn button'
+          className='get-avatar__label'
           htmlFor='img-selector'
           type='button'
         >
           Añadir imagen
-          <input
-            type='file'
-            ref={this.myFileField}
-            className=''
-            onChange={this.uploadImage}
-            //get-avatar__upload-field action__hiddenField
-          />
         </label>
-
+        <input
+          type='file'
+          ref={this.myFileField}
+          className='get-avatar__upload-field'
+          onChange={this.uploadImage}
+        />
         <div
-          className='get-avatar__preview previous_img'
+          className='get-avatar__preview'
           style={{ backgroundImage: `url(${avatar})` }}
         ></div>
       </div>

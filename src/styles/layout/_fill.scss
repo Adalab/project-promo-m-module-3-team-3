@@ -2,19 +2,6 @@
   display: flex;
   flex-direction: column;
 }
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $colorSecundary;
-  color: white;
-  width: 140px;
-  height: 30px;
-  font-family: $fontText;
-  font-size: 14px;
-  border: none;
-  border-radius: 3px;
-}
 .label {
   color: $colorText;
   font-size: 14px;
@@ -32,7 +19,36 @@
     color: #c5c5c5;
   }
 }
-.previous_img {
+
+.action__hiddenField {
+  display: none;
+}
+
+.get-avatar {
+  display: flex;
+}
+
+.get-avatar__label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorSecundary;
+  color: white;
+  width: 140px;
+  height: 30px;
+  font-family: $fontText;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+}
+
+.get-avatar__upload-field {
+  //display: none;
+  //opacity: 0%;
+}
+
+.get-avatar__preview {
   border: solid grey 1px;
   width: 30px;
   height: 30px;
@@ -40,13 +56,6 @@
   background-size: cover;
 }
 
-.inline {
-  display: flex;
-}
-
-.action__hiddenField {
-  display: none;
-}
 // .js-border-input {
 //   border: rem(1) solid red;
 // }
