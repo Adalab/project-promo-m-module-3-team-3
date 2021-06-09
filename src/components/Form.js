@@ -18,7 +18,19 @@ class Form extends React.Component {
         <Collapsable
           title='rellena'
           iconClass='fa-keyboard'
-          children={<Fill handleChange={this.props.handleChange} />}
+          children={
+            <Fill
+              handleChange={this.props.handleChange}
+              name={this.props.name}
+              job={this.props.job}
+              email={this.props.email}
+              linkedin={this.props.linkedin}
+              github={this.props.github}
+              phone={this.props.phone}
+              avatar={this.props.avatar}
+              updateAvatar={this.props.updateAvatar}
+            />
+          }
         />
         <Collapsable
           title='comparte'

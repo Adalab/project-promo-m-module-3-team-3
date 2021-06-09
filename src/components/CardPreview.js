@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import '../styles/App.scss';
-import photo from '../images/ilustraciones.gif';
+import Profile from './Profile';
 
 class CardPreview extends Component {
   render() {
-    const data = this.props.data;
-    console.log(data);
     return (
       <section className='card-preview'>
         <button className='button_reset' type='reset'>
@@ -15,17 +13,13 @@ class CardPreview extends Component {
         <div className='card'>
           <div className='card_header'>
             <h2 className='card_header--name'>
-              {this.props.name ? data.name : 'Mileva Màric'}
+              {this.props.name ? this.props.name : 'Mileva Màric'}
             </h2>
             <h3 className='card_header--job'>
               {this.props.job ? this.props.job : 'Matemática'}
             </h3>
           </div>
-          <img
-            className='card_image js__profile-preview'
-            src={photo}
-            alt=''
-          ></img>
+          <Profile avatar={this.props.avatar} />
 
           <div className='card_logos'>
             <a

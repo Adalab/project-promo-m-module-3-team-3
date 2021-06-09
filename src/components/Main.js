@@ -8,6 +8,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.updateAvatar = this.updateAvatar.bind(this);
     this.state = {
       name: '',
       job: '',
@@ -17,6 +18,7 @@ class Main extends React.Component {
       github: '',
       phone: '',
       palette: '',
+      avatar: '',
     };
   }
   handleChange(ev) {
@@ -29,21 +31,25 @@ class Main extends React.Component {
     this.setState(data);
   }
 
+  updateAvatar(avatar) {
+    this.setState({ avatar: avatar });
+  }
+
   render() {
     return (
       <div className='cards_main--background'>
-        <main className='cards_main' style={{ backgroundImage: background }}>
+        <main
+          className='cards_main'
+          style={{ backgroundImage: `url(${background})` }}
+        >
           <section className='cards_main--preview'>
-            <CardPreview
-              name={this.state.name}
-              job={this.state.job}
-              email={this.state.email}
-              linkedin={this.state.linkedin}
-              github={this.state.github}
-              phone={this.state.phone}
-            />
+            <CardPreview {...this.state} />
           </section>
-          <Form handleChange={this.handleChange} />
+          <Form
+            handleChange={this.handleChange}
+            {...this.state}
+            updateAvatar={this.updateAvatar}
+          />
         </main>
       </div>
     );

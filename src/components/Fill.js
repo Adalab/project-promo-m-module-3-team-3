@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import '../styles/App.scss';
+import GetAvatar from './GetAvatar';
 import Input from './Input';
 
 class Fill extends Component {
   render() {
+    console.log(this.props.name);
     return (
       <div className='marginform'>
         <fieldset className='js-fill personal-data form__share'>
@@ -16,6 +18,7 @@ class Fill extends Component {
             placeholder='Ej: Sally Jill'
             handleChange={this.props.handleChange}
             maxLength='18'
+            value={this.props.name}
           />
           <Input
             htmlFor='job'
@@ -30,18 +33,10 @@ class Fill extends Component {
           <label htmlFor='button' className='label'>
             Imagen de perfil
           </label>
-          <div className='inline'>
-            <label className='action__upload-btn button' htmlFor='img-selector'>
-              Añadir imagen
-            </label>
-            <input
-              type='file'
-              name=''
-              id='img-selector'
-              className='action__hiddenField js__profile-upload-btn'
-            />
-            <div className='previous_img js__profile-image js__profile-preview'></div>
-          </div>
+          <GetAvatar
+            avatar={this.props.avatar}
+            updateAvatar={this.props.updateAvatar}
+          />
           <Input
             htmlFor='email'
             label='Email'
