@@ -6,7 +6,8 @@ class CardPreview extends Component {
   render() {
     return (
       <section className='card-preview'>
-        <button className='button_reset' type='reset'>
+        <button className='button_reset' type='reset'
+        onClick={this.props.handleResetClick}>
           <i className='fa fa-trash button_reset--icon' aria-hidden='true'></i>
           reset
         </button>

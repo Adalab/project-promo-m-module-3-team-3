@@ -1,9 +1,9 @@
-import React from 'react';
-import '../styles/App.scss';
-import Design from './Design';
-import Fill from './Fill';
-import Share from './Share';
-import Collapsable from './Collapsable';
+import React from "react";
+import "../styles/App.scss";
+import Design from "./Design";
+import Fill from "./Fill";
+import Share from "./Share";
+import Collapsable from "./Collapsable";
 
 class Form extends React.Component {
   render() {
@@ -21,6 +21,7 @@ class Form extends React.Component {
           children={
             <Fill
               handleChange={this.props.handleChange}
+              handleResetClick={this.props.handleResetClick}
               name={this.props.name}
               job={this.props.job}
               email={this.props.email}

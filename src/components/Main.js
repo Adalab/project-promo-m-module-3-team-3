@@ -1,24 +1,25 @@
-import React from 'react';
-import '../styles/App.scss';
-import CardPreview from './CardPreview';
-import Form from './Form';
-import background from '../images/bg-simple.png';
+import React, { useState } from "react";
+import "../styles/App.scss";
+import CardPreview from "./CardPreview";
+import Form from "./Form";
+import background from "../images/bg-simple.png";
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.updateAvatar = this.updateAvatar.bind(this);
+    this.handleResetClick = this.handleResetClick.bind(this);
     this.state = {
-      name: '',
-      job: '',
-      image: '',
-      email: '',
-      linkedin: '',
-      github: '',
-      phone: '',
-      palette: '',
-      avatar: '',
+      name: "",
+      job: "",
+      image: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      phone: "",
+      palette: "",
+      avatar: "",
     };
   }
   handleChange(ev) {
@@ -34,6 +35,11 @@ class Main extends React.Component {
   updateAvatar(avatar) {
     this.setState({ avatar: avatar });
   }
+  handleResetClick() {
+    this.setState((prevState) => ({
+      state: prevState.state !== "" ? "" : "",
+    }));
+  }
 
   render() {
     return (
@@ -43,12 +49,16 @@ class Main extends React.Component {
           style={{ backgroundImage: `url(${background})` }}
         >
           <section className='cards_main--preview'>
-            <CardPreview {...this.state} />
+            <CardPreview
+              {...this.state}
+              handleResetClick={this.handleResetClick}
+            />
           </section>
           <Form
             handleChange={this.handleChange}
             {...this.state}
             updateAvatar={this.updateAvatar}
+            handleResetClick={this.handleResetClick}
           />
         </main>
       </div>

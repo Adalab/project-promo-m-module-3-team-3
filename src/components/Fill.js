@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import '../styles/App.scss';
-import GetAvatar from './GetAvatar';
-import Input from './Input';
+import React, { Component } from "react";
+import "../styles/App.scss";
+import GetAvatar from "./GetAvatar";
+import Input from "./Input";
 
 class Fill extends Component {
   render() {
@@ -17,6 +17,7 @@ class Fill extends Component {
             name='name'
             placeholder='Ej: Sally Jill'
             handleChange={this.props.handleChange}
+            handleResetClick={this.props.handleResetClick}
             maxLength='18'
             value={this.props.name}
           />
@@ -28,6 +29,7 @@ class Fill extends Component {
             name='job'
             placeholder='Ej: Front-end unicorn'
             handleChange={this.props.handleChange}
+            handleResetClick={this.props.handleResetClick}
             maxLength='20'
           />
           <label htmlFor='button' className='label'>
@@ -45,6 +47,7 @@ class Fill extends Component {
             name='email'
             placeholder='Ej: nombre@mail.com'
             handleChange={this.props.handleChange}
+            handleResetClick={this.props.handleResetClick}
           />
           <Input
             htmlFor='phone'
@@ -54,6 +57,7 @@ class Fill extends Component {
             name='phone'
             placeholder='Ej: 692699556'
             handleChange={this.props.handleChange}
+            handleResetClick={this.props.handleResetClick}
           />
           <Input
             htmlFor='linkedIn'
@@ -63,6 +67,7 @@ class Fill extends Component {
             name='linkedin'
             placeholder='sally.jill'
             handleChange={this.props.handleChange}
+            handleResetClick={this.props.handleResetClick}
           />
           <Input
             htmlFor='github'
@@ -72,6 +77,7 @@ class Fill extends Component {
             name='github'
             placeholder='sally-jill'
             handleChange={this.props.handleChange}
+            handleResetClick={this.props.handleResetClick}
           />
         </fieldset>
       </div>
