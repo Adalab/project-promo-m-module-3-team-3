@@ -33,21 +33,23 @@ class Main extends React.Component {
   updateAvatar(avatar) {
     this.setState({ avatar: avatar });
   }
-  handleResetClick() {
-    this.setState((prevState) => ({
-      state: prevState.state !== "" ? "" : "",
-    }));
+  handleResetClick(ev, name) {
+    ev.preventDefault();
+    this.setState({ name: name });
   }
 
   render() {
     return (
-      <div className="cards_main--background">
+      <div className='cards_main--background'>
         <main
-          className="cards_main"
+          className='cards_main'
           style={{ backgroundImage: `url(${background})` }}
         >
-          <section className="cards_main--preview">
-            <CardPreview {...this.state} />
+          <section className='cards_main--preview'>
+            <CardPreview
+              {...this.state}
+              handleResetClick={this.handleResetClick}
+            />
           </section>
           <Form
             handleChange={this.handleChange}

@@ -7,10 +7,14 @@ import Collapsable from "./Collapsable";
 class Form extends React.Component {
   render() {
     return (
-      <form className="cards_main--form">
+      <form
+        onSubmit={this.props.handleForm}
+        handleResetClick={this.handleResetClick}
+        className='cards_main--form'
+      >
         <Collapsable
-          title="Diseña"
-          iconClass="fa-object-ungroup"
+          title='Diseña'
+          iconClass='fa-object-ungroup'
           children={
             <Design
               handleChange={this.props.handleChange}
@@ -20,8 +24,8 @@ class Form extends React.Component {
           open
         />
         <Collapsable
-          title="rellena"
-          iconClass="fa-keyboard"
+          title='rellena'
+          iconClass='fa-keyboard'
           children={
             <Fill
               handleChange={this.props.handleChange}
@@ -38,8 +42,8 @@ class Form extends React.Component {
           }
         />
         <Collapsable
-          title="comparte"
-          iconClass="fas fa-share-alt"
+          title='comparte'
+          iconClass='fas fa-share-alt'
           children={<Share />}
         />
       </form>
