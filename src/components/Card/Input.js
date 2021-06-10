@@ -11,7 +11,7 @@ function Input(props) {
 
   return (
     <>
-      <label htmlFor={props.htmlFor} className="label">
+      <label htmlFor={props.htmlFor} className='label'>
         {props.label}
       </label>
       <input
@@ -19,9 +19,10 @@ function Input(props) {
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}
-        className="input"
+        className='input'
         onChange={props.handleChange}
         maxLength={props.maxlength}
+        value={props.value}
       />
     </>
   );

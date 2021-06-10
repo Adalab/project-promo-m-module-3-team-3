@@ -37,7 +37,6 @@ class Form extends React.Component {
               github={this.props.github}
               phone={this.props.phone}
               avatar={this.props.avatar}
-              value={this.props.value}
               updateAvatar={this.props.updateAvatar}
             />
           }
