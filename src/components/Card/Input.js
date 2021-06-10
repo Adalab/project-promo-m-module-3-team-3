@@ -1,5 +1,4 @@
-import React from 'react';
-import '../styles/App.scss';
+import React from "react";
 
 function Input(props) {
   // const handleChange = (ev) => {
@@ -12,7 +11,7 @@ function Input(props) {
 
   return (
     <>
-      <label htmlFor={props.htmlFor} className='label'>
+      <label htmlFor={props.htmlFor} className="label">
         {props.label}
       </label>
       <input
@@ -20,7 +19,7 @@ function Input(props) {
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}
-        className='input'
+        className="input"
         onChange={props.handleChange}
         maxLength={props.maxlength}
       />

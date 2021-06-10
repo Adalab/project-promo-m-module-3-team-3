@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import "../styles/App.scss";
+import React from "react";
 import CardPreview from "./CardPreview";
 import Form from "./Form";
-import background from "../images/bg-simple.png";
+import background from "../../images/bg-simple.png";
 
 class Main extends React.Component {
   constructor(props) {
@@ -18,14 +17,13 @@ class Main extends React.Component {
       linkedin: "",
       github: "",
       phone: "",
-      palette: "",
+      palette: "1",
       avatar: "",
     };
   }
   handleChange(ev) {
     const value = ev.target.value;
     const key = ev.target.name;
-    console.log(key);
     const data = {
       [key]: value,
     };
@@ -43,16 +41,13 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className='cards_main--background'>
+      <div className="cards_main--background">
         <main
-          className='cards_main'
+          className="cards_main"
           style={{ backgroundImage: `url(${background})` }}
         >
-          <section className='cards_main--preview'>
-            <CardPreview
-              {...this.state}
-              handleResetClick={this.handleResetClick}
-            />
+          <section className="cards_main--preview">
+            <CardPreview {...this.state} />
           </section>
           <Form
             handleChange={this.handleChange}

@@ -4,7 +4,7 @@
   margin-bottom: 8px;
   text-transform: uppercase;
   font-size: 12px;
-  border: none;
+  border: solid 1px white;
   background: none;
   color: #54585a;
   border-radius: 15px;
@@ -36,12 +36,12 @@
   &_header {
     padding-left: 24px;
     margin-bottom: 12px;
-    border-left: #438792 5px solid;
+    border-left: $colorpalette2 5px solid;
     &--name {
       text-transform: capitalize;
       font-size: 18px;
       font-weight: bold;
-      color: #114e4e;
+      color: $colorText;
       padding-bottom: 4px;
     }
     &--job {
@@ -67,10 +67,44 @@
       width: 32px;
       text-align: center;
       line-height: 27px;
-      border: solid 2px #a2deaf;
+      border: solid 2px $colorpalette3;
       border-radius: 30px;
       opacity: 0.5;
-      color: #114e4e;
+      color: $colorText;
+    }
+  }
+}
+
+.orange {
+  .card {
+    &_header {
+      border-left: $colorpalette5 5px solid;
+      &--name {
+        color: $colorpalette4;
+      }
+    }
+    &_logos {
+      &--icon {
+        border: solid 2px $colorpalette6;
+        color: $colorpalette4;
+      }
+    }
+  }
+}
+
+.yellow {
+  .card {
+    &_header {
+      border-left: $colorpalette7 5px solid;
+      &--name {
+        color: $colorpalette7;
+      }
+    }
+    &_logos {
+      &--icon {
+        border: solid 2px $colorpalette8;
+        color: $colorpalette7;
+      }
     }
   }
 }
