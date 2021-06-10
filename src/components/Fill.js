@@ -29,6 +29,7 @@ class Fill extends Component {
             placeholder='Ej: Front-end unicorn'
             handleChange={this.props.handleChange}
             maxLength='20'
+            value={this.props.job}
           />
           <label htmlFor='button' className='label'>
             Imagen de perfil
@@ -45,6 +46,7 @@ class Fill extends Component {
             name='email'
             placeholder='Ej: nombre@mail.com'
             handleChange={this.props.handleChange}
+            value={this.props.email}
           />
           <Input
             htmlFor='phone'
@@ -54,6 +56,7 @@ class Fill extends Component {
             name='phone'
             placeholder='Ej: 692699556'
             handleChange={this.props.handleChange}
+            value={this.props.phone}
           />
           <Input
             htmlFor='linkedIn'
@@ -63,6 +66,7 @@ class Fill extends Component {
             name='linkedin'
             placeholder='sally.jill'
             handleChange={this.props.handleChange}
+            value={this.props.linkedin}
           />
           <Input
             htmlFor='github'
@@ -72,6 +76,7 @@ class Fill extends Component {
             name='github'
             placeholder='sally-jill'
             handleChange={this.props.handleChange}
+            value={this.props.github}
           />
         </fieldset>
       </div>
