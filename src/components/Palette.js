@@ -7,9 +7,10 @@ function Palette(props) {
       <input
         type='radio'
         name='palette'
-        // className='design__option-radio js-palette'
         value={props.value}
         id={props.id}
+        onChange={props.handleChange}
+        checked={props.isChecked}
       />
       <ul className={props.palette}>
         <li className='design__option-1'></li>

@@ -76,31 +76,35 @@
 }
 
 .orange {
-  &_header {
-    border-left: $colorpalette5 5px solid;
-    &--name {
-      color: $colorpalette4;
+  .card {
+    &_header {
+      border-left: $colorpalette5 5px solid;
+      &--name {
+        color: $colorpalette4;
+      }
     }
-  }
-  &_logos {
-    &--icon {
-      border: solid 2px $colorpalette6;
-      color: $colorpalette4;
+    &_logos {
+      &--icon {
+        border: solid 2px $colorpalette6;
+        color: $colorpalette4;
+      }
     }
   }
 }
 
 .yellow {
-  &_header {
-    border-left: $colorpalette7 5px solid;
-    &--name {
-      color: $colorpalette7;
+  .card {
+    &_header {
+      border-left: $colorpalette7 5px solid;
+      &--name {
+        color: $colorpalette7;
+      }
     }
-  }
-  &_logos {
-    &--icon {
-      border: solid 2px $colorpalette8;
-      color: $colorpalette7;
+    &_logos {
+      &--icon {
+        border: solid 2px $colorpalette8;
+        color: $colorpalette7;
+      }
     }
   }
 }

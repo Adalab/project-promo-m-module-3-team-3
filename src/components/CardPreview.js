@@ -3,14 +3,31 @@ import '../styles/App.scss';
 import Profile from './Profile';
 
 class CardPreview extends Component {
+  constructor(props) {
+    super(props);
+    this.changeClass = this.changeClass.bind(this);
+    this.colorClass = '';
+  }
+
+  changeClass() {
+    this.colorClass = '';
+    if (this.props.palette === '1') {
+      this.colorClass = '';
+    } else if (this.props.palette === '2') {
+      this.colorClass = 'orange';
+    } else {
+      this.colorClass = 'yellow';
+    }
+    return this.colorClass;
+  }
   render() {
     return (
-      <section className='card-preview'>
+      <section className='card-preview '>
         <button className='button_reset' type='reset'>
           <i className='fa fa-trash button_reset--icon' aria-hidden='true'></i>
           reset
         </button>
-        <div className='card'>
+        <div className={`card ${this.changeClass()}`}>
           <div className='card_header'>
             <h2 className='card_header--name'>
               {this.props.name ? this.props.name : 'Mileva Màric'}

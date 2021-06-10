@@ -17,14 +17,13 @@ class Main extends React.Component {
       linkedin: '',
       github: '',
       phone: '',
-      palette: '',
+      palette: '1',
       avatar: '',
     };
   }
   handleChange(ev) {
     const value = ev.target.value;
     const key = ev.target.name;
-    console.log(key);
     const data = {
       [key]: value,
     };

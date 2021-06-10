@@ -12,7 +12,12 @@ class Form extends React.Component {
         <Collapsable
           title='Diseña'
           iconClass='fa-object-ungroup'
-          children={<Design />}
+          children={
+            <Design
+              handleChange={this.props.handleChange}
+              palette={this.props.palette}
+            />
+          }
           open
         />
         <Collapsable

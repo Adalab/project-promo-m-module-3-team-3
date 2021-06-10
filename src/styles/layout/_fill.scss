@@ -26,34 +26,33 @@
 
 .get-avatar {
   display: flex;
-}
-
-.get-avatar__label {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $colorSecundary;
-  color: white;
-  width: 140px;
-  height: 30px;
-  font-family: $fontText;
-  font-size: 14px;
-  border: none;
-  border-radius: 3px;
-}
-
-.get-avatar__upload-field {
-  //display: none;
-  //opacity: 0%;
-}
-
-.get-avatar__preview {
-  border: solid grey 1px;
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  background-size: cover;
+  &__label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colorSecundary;
+    color: white;
+    width: 140px;
+    height: 30px;
+    font-family: $fontText;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+  }
+  &__upload-field {
+    opacity: 0%;
+    position: absolute;
+    left: 45px;
+    cursor: pointer;
+  }
+  &__preview {
+    border: solid grey 1px;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background-size: cover;
+  }
 }
 
 // .js-border-input {

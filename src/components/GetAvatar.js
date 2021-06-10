@@ -74,13 +74,13 @@ class GetAvatar extends React.Component {
           type='button'
         >
           Añadir imagen
+          <input
+            type='file'
+            ref={this.myFileField}
+            className='get-avatar__upload-field'
+            onChange={this.uploadImage}
+          />
         </label>
-        <input
-          type='file'
-          ref={this.myFileField}
-          className='get-avatar__upload-field'
-          onChange={this.uploadImage}
-        />
         <div
           className='get-avatar__preview'
           style={{ backgroundImage: `url(${avatar})` }}
