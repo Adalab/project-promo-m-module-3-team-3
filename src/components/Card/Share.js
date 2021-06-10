@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../styles/App.scss";
 
 class Share extends Component {
   render() {

@@ -1,8 +1,7 @@
-import React from 'react';
-import '../styles/App.scss';
-import CardPreview from './CardPreview';
-import Form from './Form';
-import background from '../images/bg-simple.png';
+import React from "react";
+import CardPreview from "./CardPreview";
+import Form from "./Form";
+import background from "../../images/bg-simple.png";
 
 class Main extends React.Component {
   constructor(props) {
@@ -10,15 +9,15 @@ class Main extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.updateAvatar = this.updateAvatar.bind(this);
     this.state = {
-      name: '',
-      job: '',
-      image: '',
-      email: '',
-      linkedin: '',
-      github: '',
-      phone: '',
-      palette: '1',
-      avatar: '',
+      name: "",
+      job: "",
+      image: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      phone: "",
+      palette: "1",
+      avatar: "",
     };
   }
   handleChange(ev) {
@@ -36,12 +35,12 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className='cards_main--background'>
+      <div className="cards_main--background">
         <main
-          className='cards_main'
+          className="cards_main"
           style={{ backgroundImage: `url(${background})` }}
         >
-          <section className='cards_main--preview'>
+          <section className="cards_main--preview">
             <CardPreview {...this.state} />
           </section>
           <Form

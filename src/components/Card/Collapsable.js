@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import '../styles/App.scss';
+import React, { Component } from "react";
 
 class Collapsable extends Component {
   constructor(props) {
@@ -36,15 +35,15 @@ class Collapsable extends Component {
     });
   }
   render() {
-    const newClass = this.state.isOpen ? 'showContent' : 'hideContent';
+    const newClass = this.state.isOpen ? "showContent" : "hideContent";
     return (
       <div className={newClass}>
-        <div className='collapsible' onClick={this.handleClick}>
+        <div className="collapsible" onClick={this.handleClick}>
           <i className={`far ${this.props.iconClass} collapsible__icon`}></i>
-          <div className='collapsible__title'>{this.props.title}</div>
-          <i className='fas fa-chevron-down arrow'></i>
+          <div className="collapsible__title">{this.props.title}</div>
+          <i className="fas fa-chevron-down arrow"></i>
         </div>
-        <div className='content'>{this.props.children}</div>
+        <div className="content">{this.props.children}</div>
       </div>
     );
   }

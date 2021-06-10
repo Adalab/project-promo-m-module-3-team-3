@@ -1,17 +1,16 @@
-import React from 'react';
-import '../styles/App.scss';
-import Design from './Design';
-import Fill from './Fill';
-import Share from './Share';
-import Collapsable from './Collapsable';
+import React from "react";
+import Design from "./Design";
+import Fill from "./Fill";
+import Share from "./Share";
+import Collapsable from "./Collapsable";
 
 class Form extends React.Component {
   render() {
     return (
-      <form className='cards_main--form'>
+      <form className="cards_main--form">
         <Collapsable
-          title='Diseña'
-          iconClass='fa-object-ungroup'
+          title="Diseña"
+          iconClass="fa-object-ungroup"
           children={
             <Design
               handleChange={this.props.handleChange}
@@ -21,8 +20,8 @@ class Form extends React.Component {
           open
         />
         <Collapsable
-          title='rellena'
-          iconClass='fa-keyboard'
+          title="rellena"
+          iconClass="fa-keyboard"
           children={
             <Fill
               handleChange={this.props.handleChange}
@@ -38,8 +37,8 @@ class Form extends React.Component {
           }
         />
         <Collapsable
-          title='comparte'
-          iconClass='fas fa-share-alt'
+          title="comparte"
+          iconClass="fas fa-share-alt"
           children={<Share />}
         />
       </form>
