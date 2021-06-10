@@ -33,9 +33,19 @@ class Main extends React.Component {
   updateAvatar(avatar) {
     this.setState({ avatar: avatar });
   }
-  handleResetClick(ev, name) {
+  handleResetClick(ev) {
     ev.preventDefault();
-    this.setState({ name: name });
+    this.setState({
+      name: "",
+      job: "",
+      image: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      phone: "",
+      palette: "1",
+      avatar: "",
+    });
   }
 
   render() {
