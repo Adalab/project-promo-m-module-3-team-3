@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ec from "../../images/ec.png";
 import hojas from "../../images/hojas.png";
 import de from "../../images/de.png";
+import { Link } from "react-router-dom";
 
 class Main extends Component {
   render() {
@@ -59,11 +60,10 @@ class Main extends Component {
             <div className="main__section-box--text">Comparte</div>
           </div>
         </section>
-        <button className="main__button" type="button">
-          <a className="main__button--link" href="cards.html" title="comenzar">
-            Comenzar
-          </a>
-        </button>
+
+        <Link className="main__button--link" to="/card">
+          Comenzar
+        </Link>
       </main>
     );
   }
