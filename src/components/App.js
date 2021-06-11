@@ -2,7 +2,9 @@ import React from "react";
 import "../styles/App.scss";
 import Card from "./Card/Card";
 import Page from "./Landing/Page";
+import PageNotFound from "./PageNotFound";
 import { Route, Switch } from "react-router-dom";
+
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
       <Switch>
         <Route path="/" component={Page} />
         <Route path="/card" component={Card} />
+        <Route component={PageNotFound} />
       </Switch>
     </div>
   );
