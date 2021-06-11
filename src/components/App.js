@@ -1,15 +1,15 @@
-import React from "react";
-import "../styles/App.scss";
-import Card from "./Card/Card";
-import Page from "./Landing/Page";
-import { Route, Switch } from "react-router-dom";
+import React from 'react';
+import '../styles/App.scss';
+import Card from './Card/Card';
+import Page from './Landing/Page';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Switch>
-        <Route path="/" component={Page} />
-        <Route path="/card" component={Card} />
+        <Route exact path='/' component={Page} />
+        <Route path='/card' component={Card} />
       </Switch>
     </div>
   );
