@@ -13,3 +13,5 @@ const postDataFetch = () => {
     }.then((response) => response.json())
   );
 };
+
+export { postDataFetch };
