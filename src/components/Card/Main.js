@@ -59,41 +59,43 @@ class Main extends React.Component {
   handleFetch(ev) {
     ev.preventDefault();
     if (this.state.name === '') {
-      this.response = <p>Debes rellenar el nombre</p>;
-      console.log(this.response);
-    }
-    postDataFetch(this.state).then((resultData) => {
-      console.log(resultData);
-      if (resultData.success === false) {
-        this.response = 'Faltan Datos por llenar';
-      } else {
-        const textCard = 'Echa un vistazo a mi tarjeta de visita 🌱 ';
-        this.response = (
-          <>
-            <h3 class='cardcreated-js'>La tarjeta ha sido creada:</h3>
-            <p>
-              <a class='linkcard' href={resultData.cardURL}>
-                {resultData.cardURL}
-              </a>
-            </p>
-            `;
-            <button
-              className='container__share__twitter js-twitter hidden'
-              type='button'
-            >
-              <a
-                className='share__twitter--link js-linkTwitter'
-                href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
-                title='Twitter'
+      this.response = 'Debes rellenar el nombre';
+    } else if (this.state.job === '') {
+      this.response = 'Debes rellenar el puesto';
+    } else {
+      postDataFetch(this.state).then((resultData) => {
+        console.log(resultData);
+        if (resultData.success === false) {
+          this.response = 'Faltan Datos por llenar';
+        } else {
+          const textCard = 'Echa un vistazo a mi tarjeta de visita 🌱 ';
+          this.response = (
+            <>
+              <h3 class='cardcreated-js'>La tarjeta ha sido creada:</h3>
+              <p>
+                <a class='linkcard' href={resultData.cardURL}>
+                  {resultData.cardURL}
+                </a>
+              </p>
+              `;
+              <button
+                className='container__share__twitter js-twitter hidden'
+                type='button'
               >
-                <i className='fab fa-twitter'></i>
-                Compartir en Twitter
-              </a>
-            </button>
-          </>
-        );
-      }
-    });
+                <a
+                  className='share__twitter--link js-linkTwitter'
+                  href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
+                  title='Twitter'
+                >
+                  <i className='fab fa-twitter'></i>
+                  Compartir en Twitter
+                </a>
+              </button>
+            </>
+          );
+        }
+      });
+    }
   }
 
   render() {
