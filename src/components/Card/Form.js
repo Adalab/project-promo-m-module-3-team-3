@@ -44,7 +44,12 @@ class Form extends React.Component {
         <Collapsable
           title="comparte"
           iconClass="fas fa-share-alt"
-          children={<Share handleFetch={this.props.handleFetch} />}
+          children={
+            <Share
+              handleFetch={this.props.handleFetch}
+              response={this.props.response}
+            />
+          }
         />
       </form>
     );

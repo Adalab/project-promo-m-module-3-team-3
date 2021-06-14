@@ -8,6 +8,8 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
 
+    this.response = "";
+
     this.state = {
       name: "",
       job: "",
@@ -54,12 +56,41 @@ class Main extends React.Component {
     });
   }
 
-  {/*Ver cómo es esta función
   handleFetch() {
-    postDataFetch()
-      .then((resultData) => {
-        
-  }*/}
+    postDataFetch(this.state).then((resultData) => {
+      if (resultData.success === false) {
+        console.log(resultData);
+        this.response = "Faltan Datos por llenar";
+      } else {
+        const textCard = "Echa un vistazo a mi tarjeta de visita 🌱 ";
+        this.response = (
+          <>
+            <h3 class="cardcreated-js">La tarjeta ha sido creada:</h3>
+            <p>
+              <a class="linkcard" target="_blank" href={resultData.cardURL}>
+                {resultData.cardURL}
+              </a>
+            </p>
+            `;
+            <button
+              className="container__share__twitter js-twitter hidden"
+              type="button"
+            >
+              <a
+                className="share__twitter--link js-linkTwitter"
+                href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
+                title="Twitter"
+                target="_blank"
+              >
+                <i className="fab fa-twitter"></i>
+                Compartir en Twitter
+              </a>
+            </button>
+          </>
+        );
+      }
+    });
+  }
 
   render() {
     return (
@@ -80,6 +111,7 @@ class Main extends React.Component {
             updateAvatar={this.updateAvatar}
             handleResetClick={this.handleResetClick}
             handleFetch={this.handleFetch}
+            response={this.response}
           />
         </main>
       </div>
