@@ -14,7 +14,9 @@ class Share extends Component {
             <i className='far fa-address-card'></i>Crear Tarjeta
           </button>
 
-          <div className='twitter_button'>{this.props.response}</div>
+          <div className='twitter_button'>
+            {this.props.response ? <p>{this.props.response}</p> : null}
+          </div>
         </div>
       </fieldset>
     );

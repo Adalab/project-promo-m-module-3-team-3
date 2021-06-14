@@ -60,7 +60,7 @@ class CardPreview extends Component {
               <i className='far fa-envelope'></i>
             </a>
             <a
-              href={`https://www.linkedin.com/in/ ${this.props.linkedin}`}
+              href={`https://www.linkedin.com/in/${this.props.linkedin}`}
               className='link1 js-linkedin card_logos--icon'
               target='_blank'
               rel='noreferrer'
@@ -69,8 +69,7 @@ class CardPreview extends Component {
             </a>
 
             <a
-              href={`https://github.com/
-              ${this.props.github}`}
+              href={`https://github.com/${this.props.github}`}
               className='link1 js-github card_logos--icon'
               target='_blank'
               rel='noreferrer'

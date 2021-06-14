@@ -78,15 +78,14 @@ class Main extends React.Component {
               <a class='linkcard' href={resultData.cardURL}>
                 {resultData.cardURL}
               </a>
-
-              <button
+              <a
                 className='container__share__twitter'
                 href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
                 title='Twitter'
               >
                 <i className='fab fa-twitter'></i>
                 Compartir en Twitter
-              </button>
+              </a>
             </>
           );
           return this.response;
