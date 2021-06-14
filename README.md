@@ -1,5 +1,5 @@
 
-Proyecto  creado por 5 compañeras durante el transcurso del bootcap de Adalab
+Proyecto  realizado por 5 compañeras durante el transcurso del bootcamp de Adalab.
 Dicho proyecto consiste en heredar código realizado por compañeras de otro equipo,  y refactorizarlo
 
 Puedes ver el resultado final accediendo directamente a este enlace:
@@ -12,7 +12,7 @@ Uso de React
 Búsqueda de información en librerias externas
 
 
-Para poder lllevarlo a cabo hemos aplicado conocimientos adquiridos durante estos meses
+Para poder llevarlo a cabo hemos aplicado conocimientos adquiridos durante estos meses
 Se detallan algunos de los conocimientos aplicados para realización del proyecto: 
 
 Uso de HTML Ecma6
@@ -33,7 +33,7 @@ Publicación del resultado en Internet usando GitHub Pagesç
 MARCO SCRUM dividido en dos sprints
 
 
-##Acceso y estructuración de carpetas proyecto
+##Acceso y estructuración de carpetas del proyecto
 
 
 

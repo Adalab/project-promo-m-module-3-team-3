@@ -16,7 +16,6 @@ class Fill extends Component {
             name='name'
             placeholder='Ej: Sally Jill'
             handleChange={this.props.handleChange}
-            handleResetClick={this.props.handleResetClick}
             maxLength='18'
             value={this.props.name}
           />
@@ -28,7 +27,6 @@ class Fill extends Component {
             name='job'
             placeholder='Ej: Front-end unicorn'
             handleChange={this.props.handleChange}
-            handleResetClick={this.props.handleResetClick}
             maxLength='20'
             value={this.props.job}
           />
@@ -47,7 +45,6 @@ class Fill extends Component {
             name='email'
             placeholder='Ej: nombre@mail.com'
             handleChange={this.props.handleChange}
-            handleResetClick={this.props.handleResetClick}
             value={this.props.email}
           />
           <Input
@@ -58,7 +55,6 @@ class Fill extends Component {
             name='phone'
             placeholder='Ej: 692699556'
             handleChange={this.props.handleChange}
-            handleResetClick={this.props.handleResetClick}
             value={this.props.phone}
           />
           <Input
@@ -69,7 +65,6 @@ class Fill extends Component {
             name='linkedin'
             placeholder='sally.jill'
             handleChange={this.props.handleChange}
-            handleResetClick={this.props.handleResetClick}
             value={this.props.linkedin}
           />
           <Input
@@ -80,7 +75,6 @@ class Fill extends Component {
             name='github'
             placeholder='sally-jill'
             handleChange={this.props.handleChange}
-            handleResetClick={this.props.handleResetClick}
             value={this.props.github}
           />
         </fieldset>
