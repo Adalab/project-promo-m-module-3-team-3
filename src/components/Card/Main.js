@@ -1,23 +1,23 @@
-import React from "react";
-import CardPreview from "./CardPreview";
-import Form from "./Form";
-import background from "../../images/bg-simple.png";
-import { postDataFetch } from "../../services/api";
+import React from 'react';
+import CardPreview from './CardPreview';
+import Form from './Form';
+import background from '../../images/bg-simple.png';
+import { postDataFetch } from '../../services/api';
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: "",
-      job: "",
-      image: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      phone: "",
-      palette: "1",
-      avatar: "",
+      name: '',
+      job: '',
+      image: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      phone: '',
+      palette: '1',
+      avatar: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -42,33 +42,33 @@ class Main extends React.Component {
   handleResetClick(ev) {
     ev.preventDefault();
     this.setState({
-      name: "",
-      job: "",
-      image: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      phone: "",
-      palette: "1",
-      avatar: "",
+      name: '',
+      job: '',
+      image: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      phone: '',
+      palette: '1',
+      avatar: '',
     });
   }
 
-  {/*Ver cómo es esta función
+  /*Ver cómo es esta función
   handleFetch() {
     postDataFetch()
       .then((resultData) => {
         
-  }*/}
+  }*/
 
   render() {
     return (
-      <div className="cards_main--background">
+      <div className='cards_main--background'>
         <main
-          className="cards_main"
+          className='cards_main'
           style={{ backgroundImage: `url(${background})` }}
         >
-          <section className="cards_main--preview">
+          <section className='cards_main--preview'>
             <CardPreview
               {...this.state}
               handleResetClick={this.handleResetClick}
