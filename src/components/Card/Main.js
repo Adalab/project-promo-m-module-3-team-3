@@ -1,25 +1,25 @@
-import React from "react";
-import CardPreview from "./CardPreview";
-import Form from "./Form";
-import background from "../../images/bg-simple.png";
-import postDataFetch from "../../services/api";
+import React from 'react';
+import CardPreview from './CardPreview';
+import Form from './Form';
+import background from '../../images/bg-simple.png';
+import postDataFetch from '../../services/api';
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
 
-    this.response = "";
+    this.response = '';
 
     this.state = {
-      name: "",
-      job: "",
+      name: '',
+      job: '',
       //image: '',
-      email: "",
-      linkedin: "",
-      github: "",
-      phone: "",
-      palette: "1",
-      photo: "",
+      email: '',
+      linkedin: '',
+      github: '',
+      phone: '',
+      palette: '1',
+      photo: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -44,55 +44,59 @@ class Main extends React.Component {
   handleResetClick(ev) {
     ev.preventDefault();
     this.setState({
-      name: "",
-      job: "",
-      image: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      phone: "",
-      palette: "1",
-      photo: "",
+      name: '',
+      job: '',
+      image: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      phone: '',
+      palette: '1',
+      photo: '',
     });
   }
 
   handleFetch(ev) {
     ev.preventDefault();
-    if (this.state.name === "") {
-      this.response = "Debes rellenar el nombre";
-    } else if (this.state.job === "") {
-      this.response = "Debes rellenar el puesto";
+    if (this.state.name === '') {
+      this.response = 'Debes rellenar el nombre';
+      return this.response;
+    } else if (this.state.job === '') {
+      this.response = 'Debes rellenar el puesto';
+      return this.response;
     } else {
       postDataFetch(this.state).then((resultData) => {
         console.log(resultData);
         if (resultData.success === false) {
-          this.response = "Faltan Datos por llenar";
+          this.response = 'Faltan Datos por llenar';
+          return this.response;
         } else {
-          const textCard = "Echa un vistazo a mi tarjeta de visita 🌱 ";
+          const textCard = 'Echa un vistazo a mi tarjeta de visita 🌱 ';
           this.response = (
             <>
-              <h3 class="cardcreated-js">La tarjeta ha sido creada:</h3>
+              <h3 class='cardcreated-js'>La tarjeta ha sido creada:</h3>
               <p>
-                <a class="linkcard" href={resultData.cardURL}>
+                <a class='linkcard' href={resultData.cardURL}>
                   {resultData.cardURL}
                 </a>
               </p>
               `;
               <button
-                className="container__share__twitter js-twitter hidden"
-                type="button"
+                className='container__share__twitter js-twitter hidden'
+                type='button'
               >
                 <a
-                  className="share__twitter--link js-linkTwitter"
+                  className='share__twitter--link js-linkTwitter'
                   href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
-                  title="Twitter"
+                  title='Twitter'
                 >
-                  <i className="fab fa-twitter"></i>
+                  <i className='fab fa-twitter'></i>
                   Compartir en Twitter
                 </a>
               </button>
             </>
           );
+          return this.response;
         }
       });
     }
@@ -100,12 +104,12 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className="cards_main--background">
+      <div className='cards_main--background'>
         <main
-          className="cards_main"
+          className='cards_main'
           style={{ backgroundImage: `url(${background})` }}
         >
-          <section className="cards_main--preview">
+          <section className='cards_main--preview'>
             <CardPreview
               {...this.state}
               handleResetClick={this.handleResetClick}
