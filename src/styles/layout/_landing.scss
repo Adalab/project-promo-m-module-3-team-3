@@ -4,6 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: -1;
+  background-size: cover;
+  background-position: left;
   &__image {
     width: 250px;
     margin-bottom: 35px;
@@ -183,7 +186,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-  //background-image: url("../images/bg-simple.png");
-  // background-size: cover;
-  // background-position: center;
+  background-size: cover;
+  background-position: left;
 }
