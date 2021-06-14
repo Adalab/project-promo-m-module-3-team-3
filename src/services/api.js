@@ -1,6 +1,6 @@
 const ENDPOINT = "https://awesome-profile-cards.herokuapp.com/card";
 
-const postDataFetch = () => {
+const postDataFetch = (data) => {
   return (
     fetch(ENDPOINT),
     {
