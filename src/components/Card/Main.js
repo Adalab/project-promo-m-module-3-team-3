@@ -13,7 +13,6 @@ class Main extends React.Component {
     this.state = {
       name: '',
       job: '',
-      //image: '',
       email: '',
       linkedin: '',
       github: '',
@@ -58,6 +57,7 @@ class Main extends React.Component {
 
   handleFetch(ev) {
     ev.preventDefault();
+    this.response = '';
     if (this.state.name === '') {
       this.response = 'Debes rellenar el nombre';
       return this.response;
@@ -75,24 +75,17 @@ class Main extends React.Component {
           this.response = (
             <>
               <h3 class='cardcreated-js'>La tarjeta ha sido creada:</h3>
-              <p>
-                <a class='linkcard' href={resultData.cardURL}>
-                  {resultData.cardURL}
-                </a>
-              </p>
-              `;
+              <a class='linkcard' href={resultData.cardURL}>
+                {resultData.cardURL}
+              </a>
+
               <button
-                className='container__share__twitter js-twitter hidden'
-                type='button'
+                className='container__share__twitter'
+                href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
+                title='Twitter'
               >
-                <a
-                  className='share__twitter--link js-linkTwitter'
-                  href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
-                  title='Twitter'
-                >
-                  <i className='fab fa-twitter'></i>
-                  Compartir en Twitter
-                </a>
+                <i className='fab fa-twitter'></i>
+                Compartir en Twitter
               </button>
             </>
           );
