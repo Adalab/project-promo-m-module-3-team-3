@@ -65,7 +65,7 @@ class GetAvatar extends React.Component {
   }
 
   render() {
-    const avatar = this.props.photo === '' ? defaultPhoto : this.props.photo;
+    const photo = this.props.photo === '' ? defaultPhoto : this.props.photo;
     return (
       <div className='get-avatar'>
         <label
@@ -83,7 +83,7 @@ class GetAvatar extends React.Component {
         </label>
         <div
           className='get-avatar__preview'
-          style={{ backgroundImage: `url(${avatar})` }}
+          style={{ backgroundImage: `url(${photo})` }}
         ></div>
       </div>
     );
@@ -91,7 +91,7 @@ class GetAvatar extends React.Component {
 }
 
 GetAvatar.propTypes = {
-  avatar: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
   updateAvatar: PropTypes.func.isRequired,
 };
 
