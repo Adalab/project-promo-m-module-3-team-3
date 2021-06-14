@@ -1,17 +1,23 @@
 import React from 'react';
 import '../styles/App.scss';
-import Card from './Card/Card';
-import Page from './Landing/Page';
+import Main from './Card/Main';
+import Landing from './Landing/Landing';
+import Header from './Header';
+import Footer from './Footer';
+import PageNotFound from './PageNotFound';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='App'>
+    <>
+      <Header />
       <Switch>
-        <Route exact path='/' component={Page} />
-        <Route path='/card' component={Card} />
+        <Route exact path='/' component={Landing} />
+        <Route path='/card' component={Main} />
+        <Route component={PageNotFound} />
       </Switch>
-    </div>
+      <Footer />
+    </>
   );
 }
 
