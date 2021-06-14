@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import Profile from "./Profile";
+import React, { Component } from 'react';
+import Profile from './Profile';
 
 class CardPreview extends Component {
   constructor(props) {
     super(props);
     this.changeClass = this.changeClass.bind(this);
-    this.colorClass = "";
+    this.colorClass = '';
   }
 
   changeClass() {
-    this.colorClass = "";
-    if (this.props.palette === "1") {
-      this.colorClass = "";
-    } else if (this.props.palette === "2") {
-      this.colorClass = "orange";
+    this.colorClass = '';
+    if (this.props.palette === '1') {
+      this.colorClass = '';
+    } else if (this.props.palette === '2') {
+      this.colorClass = 'orange';
     } else {
-      this.colorClass = "yellow";
+      this.colorClass = 'yellow';
     }
     return this.colorClass;
   }
@@ -33,13 +33,13 @@ class CardPreview extends Component {
         <div className={`card ${this.changeClass()}`}>
           <div className='card_header'>
             <h2 className='card_header--name'>
-              {this.props.name ? this.props.name : "Mileva Màric"}
+              {this.props.name ? this.props.name : 'Mileva Màric'}
             </h2>
             <h3 className='card_header--job'>
-              {this.props.job ? this.props.job : "Matemática"}
+              {this.props.job ? this.props.job : 'Matemática'}
             </h3>
           </div>
-          <Profile avatar={this.props.avatar} />
+          <Profile photo={this.props.photo} />
 
           <div className='card_logos'>
             <a

@@ -2,13 +2,13 @@ import React from 'react';
 import CardPreview from './CardPreview';
 import Form from './Form';
 import background from '../../images/bg-simple.png';
-import { postDataFetch } from '../../services/api';
+import postDataFetch from '../../services/api';
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
 
-    this.response = "";
+    this.response = '';
 
     this.state = {
       name: '',
@@ -19,13 +19,13 @@ class Main extends React.Component {
       github: '',
       phone: '',
       palette: '1',
-      avatar: '',
+      photo: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.updateAvatar = this.updateAvatar.bind(this);
     this.handleResetClick = this.handleResetClick.bind(this);
-    this.handleFetch = this.handleChange.bind(this);
+    this.handleFetch = this.handleFetch.bind(this);
   }
 
   handleChange(ev) {
@@ -37,8 +37,8 @@ class Main extends React.Component {
     this.setState(data);
   }
 
-  updateAvatar(avatar) {
-    this.setState({ avatar: avatar });
+  updateAvatar(photo) {
+    this.setState({ photo: photo });
   }
 
   handleResetClick(ev) {
@@ -52,45 +52,41 @@ class Main extends React.Component {
       github: '',
       phone: '',
       palette: '1',
-      avatar: '',
+      photo: '',
     });
   }
 
-<<<<<<< HEAD
-  /*Ver cómo es esta función
-  handleFetch() {
-    postDataFetch()
-      .then((resultData) => {
-        
-  }*/
-=======
-  handleFetch() {
+  handleFetch(ev) {
+    ev.preventDefault();
+    if (this.state.name === '') {
+      this.response = <p>Debes rellenar el nombre</p>;
+      console.log(this.response);
+    }
     postDataFetch(this.state).then((resultData) => {
+      console.log(resultData);
       if (resultData.success === false) {
-        console.log(resultData);
-        this.response = "Faltan Datos por llenar";
+        this.response = 'Faltan Datos por llenar';
       } else {
-        const textCard = "Echa un vistazo a mi tarjeta de visita 🌱 ";
+        const textCard = 'Echa un vistazo a mi tarjeta de visita 🌱 ';
         this.response = (
           <>
-            <h3 class="cardcreated-js">La tarjeta ha sido creada:</h3>
+            <h3 class='cardcreated-js'>La tarjeta ha sido creada:</h3>
             <p>
-              <a class="linkcard" target="_blank" href={resultData.cardURL}>
+              <a class='linkcard' href={resultData.cardURL}>
                 {resultData.cardURL}
               </a>
             </p>
             `;
             <button
-              className="container__share__twitter js-twitter hidden"
-              type="button"
+              className='container__share__twitter js-twitter hidden'
+              type='button'
             >
               <a
-                className="share__twitter--link js-linkTwitter"
+                className='share__twitter--link js-linkTwitter'
                 href={`https://twitter.com/intent/tweet?text=${textCard}&url=${resultData.cardURL}&hashtags=Adalabers,JavaScript,PromoMileva,week7of12`}
-                title="Twitter"
-                target="_blank"
+                title='Twitter'
               >
-                <i className="fab fa-twitter"></i>
+                <i className='fab fa-twitter'></i>
                 Compartir en Twitter
               </a>
             </button>
@@ -99,7 +95,6 @@ class Main extends React.Component {
       }
     });
   }
->>>>>>> 531ffb0cb2ad34f0e578e84c11f7904c1442621c
 
   render() {
     return (

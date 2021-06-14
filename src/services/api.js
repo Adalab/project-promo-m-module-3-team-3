@@ -1,17 +1,17 @@
-const ENDPOINT = "https://awesome-profile-cards.herokuapp.com/card";
+const ENDPOINT = 'https://awesome-profile-cards.herokuapp.com/card';
 
-const postDataFetch = (data) => {
-  return (
-    fetch(ENDPOINT),
-    {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      mode: "cors",
-      body: JSON.stringify(data),
-    }.then((response) => response.json())
-  );
+const postDataFetch = (dataState) => {
+  return fetch(ENDPOINT, {
+    method: 'POST',
+    body: JSON.stringify(dataState),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
 };
 
-export { postDataFetch };
+export default postDataFetch;

@@ -1,20 +1,16 @@
-import React from "react";
-import Design from "./Design";
-import Fill from "./Fill";
-import Share from "./Share";
-import Collapsable from "./Collapsable";
+import React from 'react';
+import Design from './Design';
+import Fill from './Fill';
+import Share from './Share';
+import Collapsable from './Collapsable';
 
 class Form extends React.Component {
   render() {
     return (
-      <form
-        onSubmit={this.props.handleForm}
-        handleResetClick={this.handleResetClick}
-        className="cards_main--form"
-      >
+      <form onSubmit={this.props.handleForm} className='cards_main--form'>
         <Collapsable
-          title="Diseña"
-          iconClass="fa-object-ungroup"
+          title='Diseña'
+          iconClass='fa-object-ungroup'
           children={
             <Design
               handleChange={this.props.handleChange}
@@ -24,8 +20,8 @@ class Form extends React.Component {
           open
         />
         <Collapsable
-          title="rellena"
-          iconClass="fa-keyboard"
+          title='rellena'
+          iconClass='fa-keyboard'
           children={
             <Fill
               handleChange={this.props.handleChange}
@@ -36,14 +32,14 @@ class Form extends React.Component {
               linkedin={this.props.linkedin}
               github={this.props.github}
               phone={this.props.phone}
-              avatar={this.props.avatar}
+              photo={this.props.photo}
               updateAvatar={this.props.updateAvatar}
             />
           }
         />
         <Collapsable
-          title="comparte"
-          iconClass="fas fa-share-alt"
+          title='comparte'
+          iconClass='fas fa-share-alt'
           children={
             <Share
               handleFetch={this.props.handleFetch}
