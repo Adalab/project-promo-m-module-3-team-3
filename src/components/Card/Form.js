@@ -42,8 +42,14 @@ class Form extends React.Component {
           iconClass='fas fa-share-alt'
           children={
             <Share
-              handleFetch={this.props.handleFetch}
-              response={this.props.response}
+              name={this.props.name}
+              job={this.props.job}
+              email={this.props.email}
+              linkedin={this.props.linkedin}
+              github={this.props.github}
+              phone={this.props.phone}
+              photo={this.props.photo}
+              palette={this.props.palette}
             />
           }
         />
