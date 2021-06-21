@@ -10,7 +10,6 @@ import { Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Header />
       <Switch>
         <Route exact path='/' component={Landing} />
         <Route path='/card' component={Main} />

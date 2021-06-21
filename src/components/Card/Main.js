@@ -1,6 +1,7 @@
 import React from 'react';
 import CardPreview from './CardPreview';
 import Form from './Form';
+import Header from '../Header';
 import background from '../../images/bg-simple.png';
 import ls from '../../services/localStorage';
 
@@ -64,26 +65,29 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div className='cards_main--background'>
-        <main
-          className='cards_main'
-          style={{ backgroundImage: `url(${background})` }}
-        >
-          <section className='cards_main--preview'>
-            <CardPreview
+      <>
+        <Header />
+        <div className='cards_main--background'>
+          <main
+            className='cards_main'
+            style={{ backgroundImage: `url(${background})` }}
+          >
+            <section className='cards_main--preview'>
+              <CardPreview
+                {...this.state}
+                handleResetClick={this.handleResetClick}
+              />
+            </section>
+            <Form
+              handleChange={this.handleChange}
               {...this.state}
+              updateAvatar={this.updateAvatar}
               handleResetClick={this.handleResetClick}
+              handleFetch={this.handleFetch}
             />
-          </section>
-          <Form
-            handleChange={this.handleChange}
-            {...this.state}
-            updateAvatar={this.updateAvatar}
-            handleResetClick={this.handleResetClick}
-            handleFetch={this.handleFetch}
-          />
-        </main>
-      </div>
+          </main>
+        </div>
+      </>
     );
   }
 }
