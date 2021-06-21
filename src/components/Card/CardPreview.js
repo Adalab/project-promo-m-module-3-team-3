@@ -44,7 +44,9 @@ class CardPreview extends Component {
           <div className='card_logos'>
             <a
               href={this.props.phone}
-              className='link1 js-phone card_logos--icon'
+              className={`card_logos--icon ${
+                this.props.phone === '' ? '' : 'full'
+              }`}
               target='_blank'
               rel='noreferrer'
             >
@@ -53,7 +55,9 @@ class CardPreview extends Component {
 
             <a
               href={`mailto: ${this.props.email}`}
-              className='link1 js-email card_logos--icon'
+              className={`card_logos--icon ${
+                this.props.email === '' ? '' : 'full'
+              }`}
               target='_blank'
               rel='noreferrer'
             >
@@ -61,7 +65,9 @@ class CardPreview extends Component {
             </a>
             <a
               href={`https://www.linkedin.com/in/${this.props.linkedin}`}
-              className='link1 js-linkedin card_logos--icon'
+              className={`card_logos--icon ${
+                this.props.linkedin === '' ? '' : 'full'
+              }`}
               target='_blank'
               rel='noreferrer'
             >
@@ -70,7 +76,9 @@ class CardPreview extends Component {
 
             <a
               href={`https://github.com/${this.props.github}`}
-              className='link1 js-github card_logos--icon'
+              className={`card_logos--icon ${
+                this.props.github === '' ? '' : 'full'
+              }`}
               target='_blank'
               rel='noreferrer'
             >
